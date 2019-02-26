@@ -25,6 +25,7 @@ class User < ApplicationRecord
 
   def self.managers
     User.where(user_id: nil)
+  end
 
   def title
     email
