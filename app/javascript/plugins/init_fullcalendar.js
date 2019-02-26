@@ -15,18 +15,10 @@ $(function () {
     defaultView: 'timelineDay',
     // schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
     events: '/api/v1/bookings',
-    resources: '/api/v1/users'
-        // events: [
-    //   {
-    //     title: 'yearstdtf',
-    //     start: '2019-02-26T16:00:00'
-    //     // start: '2019-02-26'
-    //   }
-    // ]
+    resources: '/api/v1/users',
   })
 })
+
 // };
-
-
 // export { display_calendar }
 
