@@ -1,2 +1,40 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<%= simple_form_for([ @booking ]) do |form| %>
+          <%= label_tag 'Plumbers' %>
+          <%= select_tag :fist_name, options_for_select(["user1", "user2", "user3", "user4", "user5", "user6"]),
+          prompt: "Select a plumber",
+          class: "form-control search-garden-form"
+          %>
+          <br>
+
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Intervention Slot</h2>
+
+    <%= simple_form_for :search, method: "get" do |f| %>
+      <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+<!-- document.querySelector('#calendar') -->
+
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 container form-container">
+          <br>
+           <div class="button text-center">
+          <%= submit_tag "Add", class: "btn btn-large" %>
+          </div>
+        <% end %>
+      </div>
+</div>
+
+<!-- const form = document.querySelector('#search-movies');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // <-- to prevent <form>'s native behaviour
+  const input = event.currentTarget.querySelector('.form-control');
+  results.innerHTML = '';
+  searchMovies(input.value);
+}); -->
