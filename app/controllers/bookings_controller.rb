@@ -41,7 +41,15 @@ class BookingsController < ApplicationController
   end
 
   def scoring
-    def calculation(pointa, pointb)
+    # On regarde si tout le monde a une intervention VALIDEE
+    # On récupère la dernière intervention VALIDEE de la journée pour chaque USER
+    # On calcule le temps pour aller du point I au point souhaite pour CHAQUE LAST INTERVENTION
+    # On les classe par temps minimal pour y aller
+    # On vérfie qu'il ne finit pas après 18H #
+    # On renvoie les 2 premiers avec un score entre les 2
+    # Lorsqu'il choisit une des deux c'est OK -> elle a le statut VALIDEE
+
+    def calculation(timing, otherzone)
     end
   end
 end

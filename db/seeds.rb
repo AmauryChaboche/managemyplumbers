@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 Client.destroy_all
 Intervention.destroy_all
 User.employees.destroy_all
@@ -39,4 +38,9 @@ client_1 = Client.create!(first_name: 'Gerard', last_name: 'Dupond', address: '1
 puts "create booking"
 
 booking_1 = Booking.create!(start_date: DateTime.new(2019,2,26,9,30), end_date: DateTime.new(2019,2,26,11), intervention: intervention_2, client: client_1, user: user_1)
+
+manager = User.create!(
+  email: 'amury.chaboche@gmail.com',
+  password: '123456'
+)
 

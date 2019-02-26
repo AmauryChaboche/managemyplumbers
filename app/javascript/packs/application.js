@@ -1,6 +1,19 @@
 import "bootstrap";
+
+import { display_calendar } from "../plugins/init_fullcalendar";
+
+// if (document.getElementById('calendar') ){
+//   display_calendar();
+// }
+
+
+import {initMapbox} from "../plugins/init_mapbox";
+
+initMapbox();
+
 import 'fullcalendar/dist/fullcalendar.css';
 import 'fullcalendar-scheduler/dist/scheduler.css';
+import "../plugins/flatpickr";
 import { display_calendar } from "../plugins/init_fullcalendar";
 
 if (document.getElementById('calendar') ){
@@ -17,3 +30,5 @@ if (document.getElementById('calendar') ){
     ]
   });
 }
+
+
