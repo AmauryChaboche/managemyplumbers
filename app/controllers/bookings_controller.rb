@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
+
+    scoring
   end
 
   def show
@@ -36,5 +38,10 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(
       :intervention_id, :client_id, :user_id, :start_date, :end_date, :urgency, :travel_time
     )
+  end
+
+  def scoring
+    def calculation(pointa, pointb)
+    end
   end
 end
