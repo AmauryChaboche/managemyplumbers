@@ -16,4 +16,8 @@ class Booking < ApplicationRecord
     # end_date.strftime("%s%3N")
     end_date
   end
+
+  def resourceId
+    user.id
+  end
 end
