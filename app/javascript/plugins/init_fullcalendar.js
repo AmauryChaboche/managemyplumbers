@@ -15,8 +15,7 @@ $(function () {
     defaultView: 'timelineDay',
     // schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
     events: '/api/v1/bookings',
-    resources: '/api/v1/users'
-
+    resources: '/api/v1/users',
   })
 })
 
