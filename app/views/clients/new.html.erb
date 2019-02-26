@@ -1,1 +1,8 @@
 <h2>Who is your client?</h2>
+<%= simple_form_for @client do |f| %>
+  <%= f.input :email, placeholder: 'enter email' %>
+  <%= f.input :first_name, placeholder: 'enter first name' %>
+  <%= f.input :last_name, placeholder: 'enter last name' %>
+  <%= f.input :address, placeholder: 'enter address' %>
+  <%= f.input :phone_number, placeholder: 'enter phone number' %>
+<% end %>
