@@ -4,7 +4,7 @@ class Booking < ApplicationRecord
   belongs_to :user
 
   def title
-    id.to_s
+    "#{intervention.category} - #{client.last_name}"
   end
 
   def start

@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-interventions= Intervention.create([
+interventions = Intervention.create!([
 {category: 'Water leak', duration: '30', price: '8000'},
 {category: 'Blocked toilets', duration: '30', price: '8000'},
 {category: 'Boiler breakdowns', duration: '45', price: '10000'},
@@ -14,4 +14,9 @@ interventions= Intervention.create([
 {category: 'Gaz leak', duration: '90', price: '20000'}
 ])
 
+
+manager = User.create!(
+  email: 'amury.chaboche@gmail.com',
+  password: '123456'
+)
 
