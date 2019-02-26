@@ -18,7 +18,6 @@ class User < ApplicationRecord
     User.where user_id: id
   end
 
-
   def self.employees
     User.where.not(user_id: nil)
   end
