@@ -1,5 +1,12 @@
 import "bootstrap";
 
+import { display_calendar } from "../plugins/init_fullcalendar";
+
+// if (document.getElementById('calendar') ){
+//   display_calendar();
+// }
+
+
 import {initMapbox} from "../plugins/init_mapbox";
 
 initMapbox();
@@ -23,4 +30,5 @@ if (document.getElementById('calendar') ){
     ]
   });
 }
+
 

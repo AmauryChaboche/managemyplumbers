@@ -17,4 +17,8 @@ class User < ApplicationRecord
   def employees
     User.where user_id: id
   end
+
+  def title
+    email
+  end
 end
