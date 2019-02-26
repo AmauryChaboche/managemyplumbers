@@ -1,4 +1,9 @@
 import "bootstrap";
+
+import {initMapbox} from "../plugins/init_mapbox";
+
+initMapbox();
+
 import 'fullcalendar/dist/fullcalendar.css';
 import 'fullcalendar-scheduler/dist/scheduler.css';
 import "../plugins/flatpickr";
@@ -18,3 +23,4 @@ if (document.getElementById('calendar') ){
     ]
   });
 }
+
