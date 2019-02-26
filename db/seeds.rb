@@ -11,7 +11,7 @@ interventions= Intervention.create([
 {category: 'Blocked toilets', duration: '30', price: '8000'},
 {category: 'Boiler breakdowns', duration: '45', price: '10000'},
 {category: 'Heating system problem', duration: '60', price: '12000'},
-{category: 'Gaz leak', duration: '90mn', price: '20000'}
+{category: 'Gaz leak', duration: '90', price: '20000'}
 ])
 
 
