@@ -1,11 +1,13 @@
 class ClientsController < ApplicationController
   def new
     @client = Client.new
+    @booking = Booking.new
   end
 
   def create
-    @client = Client.new(client_params)
-    @client.save
+    client = Client.create(client_params)
+    booking = Booking.create(booking_params.merge(client_id: client.id))
+    redirect_to edit_booking_path(booking)
   end
 
   def edit
@@ -20,6 +22,10 @@ class ClientsController < ApplicationController
   private
 
   def client_params
-    params.require(:client).permit(:first_name, :last_name, :address, :email, :phone_number)
+    params.require(:new_client).permit(:first_name, :last_name, :address, :email, :phone_number)
+  end
+
+  def booking_params
+    params.require(:booking).permit(:intervention_id)
   end
 end
