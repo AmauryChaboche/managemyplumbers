@@ -10,12 +10,13 @@ Rails.application.routes.draw do
   # get 'clients/edit'
   # get 'clients/update'
   devise_for :users
-  root to: 'pages#home'
+  root to: 'bookings#index'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :bookings, only: [ :index ]
       resources :users, only: [ :index ]
+      get '/users_hours', to: 'users#hours'
     end
   end
 

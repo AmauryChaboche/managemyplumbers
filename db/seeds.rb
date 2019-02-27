@@ -22,14 +22,15 @@ intervention_5 = Intervention.create!(category: 'Gaz leak', duration: '90', pric
 
 puts "create manager..."
 
-manager = User.create!(first_name: 'Angus', last_name: 'Young', email: 'angus.young@myplumbers.com', password: '123456')
+manager = User.create!(first_name: 'Amaury', last_name: 'Chaboche', email: 'amaury.chaboche@gmail.com', password: '123456', manager: manager, avatar: 'https://avatars0.githubusercontent.com/u/19595651?s=400&amp;u=6d0b4d0e05bcc8da8580be89c53852dd8ffbdc10&amp;v=4')
 
 
 puts "create users..."
 
-user_1 = User.create!(first_name: 'Bon', last_name: 'Scott', email: 'bon.scott@myplumbers.com', password: '123456', manager: manager)
-user_2 = User.create!(first_name: 'Cliff', last_name: 'Williams', email: 'cliff.williams@myplumbers.com', password: '123456', manager: manager)
-user_3 = User.create!(first_name: 'Malcolm', last_name: 'Young', email: 'malcolm.young@myplumbers.com', password: '123456', manager: manager)
+user_1 = User.create!(first_name: 'Bon', last_name: 'Scott', email: 'bon.scott@myplumbers.com', password: '123456', manager: manager, avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278765/samples/people/Bon_Scott.jpg')
+user_2 = User.create!(first_name: 'Cliff', last_name: 'Williams', email: 'cliff.williams@myplumbers.com', password: '123456', manager: manager, avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278721/samples/people/Cliff_Williams.jpg')
+user_3 = User.create!(first_name: 'Malcolm', last_name: 'Young', email: 'malcolm.young@myplumbers.com', password: '123456', manager: manager, avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278722/samples/people/Malcolm_Young.jpg')
+user_4 = User.create!(first_name: 'Angus', last_name: 'Young', email: 'angus.young@myplumbers.com', password: '123456', manager: manager, avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278764/samples/people/Angus_Young.jpg')
 
 puts "create client"
 
@@ -39,8 +40,4 @@ puts "create booking"
 
 booking_1 = Booking.create!(start_date: DateTime.new(2019,2,26,9,30), end_date: DateTime.new(2019,2,26,11), intervention: intervention_2, client: client_1, user: user_1)
 
-manager = User.create!(
-  email: 'amury.chaboche@gmail.com',
-  password: '123456'
-)
 
