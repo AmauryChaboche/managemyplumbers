@@ -5,6 +5,7 @@ const calendrier = () => {
   const duration = Number.parseInt(document.getElementById("duration").dataset.duration);
   const start_date = Number.parseInt(document.getElementById("start_date").dataset.start);
   const end_date = start_date + duration;
+  console.log(duration);
   console.log(new Date(start_date));
   console.log(new Date(end_date));
 

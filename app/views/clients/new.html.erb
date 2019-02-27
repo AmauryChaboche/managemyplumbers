@@ -8,6 +8,7 @@
   <%= f.input :address, placeholder: 'enter address' %>
   <ul id="address-search"></ul>
   <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' } %>
+  <%= f.input :urgency, inline_label: 'Urgency', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'booking[urgency]' } %>
   <%= f.submit 'do it manually' %>
 <% end %>
 

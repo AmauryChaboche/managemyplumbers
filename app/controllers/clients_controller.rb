@@ -7,6 +7,7 @@ class ClientsController < ApplicationController
   def create
     client = Client.create(client_params)
     booking = Booking.create(booking_params.merge(client_id: client.id))
+    raise
     redirect_to edit_booking_path(booking)
   end
 
@@ -26,6 +27,6 @@ class ClientsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:intervention_id)
+    params.require(:booking).permit(:intervention_id, :urgency)
   end
 end
