@@ -13,31 +13,138 @@ User.managers.destroy_all
 
 puts "create interventions..."
 
-intervention_1 = Intervention.create!(category: 'Water leak', duration: '30', price: '8000')
-intervention_2 = Intervention.create!(category: 'Blocked toilets', duration: '30', price: '8000')
-intervention_3 = Intervention.create!(category: 'Boiler breakdowns', duration: '45', price: '10000')
-intervention_4 = Intervention.create!(category: 'Heating system problem', duration: '60', price: '12000')
-intervention_5 = Intervention.create!(category: 'Gaz leak', duration: '90', price: '20000')
+intervention_1 = Intervention.create!(
+  category: 'Water leak',
+  duration: '30',
+  price: '80'
+)
+
+intervention_2 = Intervention.create!(
+  category: 'Blocked toilets',
+  duration: '30',
+  price: '90'
+)
+
+intervention_3 = Intervention.create!(
+  category: 'Boiler breakdowns',
+  duration: '45',
+  price: '100'
+)
+intervention_4 = Intervention.create!(
+  category: 'Heating system problem',
+  duration: '60',
+  price: '120'
+)
 
 
-puts "create manager..."
+intervention_5 = Intervention.create!(
+  category: 'Gaz leak',
+  duration: '90',
+  price: '200'
+)
 
-manager = User.create!(first_name: 'Amaury', last_name: 'Chaboche', email: 'amaury.chaboche@gmail.com', password: '123456', manager: manager, avatar: 'https://avatars0.githubusercontent.com/u/19595651?s=400&amp;u=6d0b4d0e05bcc8da8580be89c53852dd8ffbdc10&amp;v=4')
+puts "create managers..."
+
+manager = User.create!(
+  email: 'amaury.chaboche@gmail.com',
+  password: '123456',
+  first_name: 'Amaury',
+  last_name: 'Chab',
+  avatar: 'https://avatars0.githubusercontent.com/u/19595651?s=400&amp;u=6d0b4d0e05bcc8da8580be89c53852dd8ffbdc10&amp;v=4'
+)
 
 
-puts "create users..."
+puts "create users ..."
 
-user_1 = User.create!(first_name: 'Bon', last_name: 'Scott', email: 'bon.scott@myplumbers.com', password: '123456', manager: manager, avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278765/samples/people/Bon_Scott.jpg')
-user_2 = User.create!(first_name: 'Cliff', last_name: 'Williams', email: 'cliff.williams@myplumbers.com', password: '123456', manager: manager, avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278721/samples/people/Cliff_Williams.jpg')
-user_3 = User.create!(first_name: 'Malcolm', last_name: 'Young', email: 'malcolm.young@myplumbers.com', password: '123456', manager: manager, avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278722/samples/people/Malcolm_Young.jpg')
-user_4 = User.create!(first_name: 'Angus', last_name: 'Young', email: 'angus.young@myplumbers.com', password: '123456', manager: manager, avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278764/samples/people/Angus_Young.jpg')
 
-puts "create client"
+user_1 = User.create!(
+  first_name: 'Bon',
+  last_name: 'Scott',
+  email: 'bon.scott@myplumbers.com',
+  password: '123456',
+  manager: manager,
+  starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,19),
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278765/samples/people/Bon_Scott.jpg'
+)
 
-client_1 = Client.create!(first_name: 'Gerard', last_name: 'Dupond', address: '15 Rue De Rivoli, 75004 Paris, France', email: 'g.dupond@mail.com', phone_number: '0175404142')
+user_2 = User.create!(
+  first_name: 'Cliff',
+  last_name: 'Williams',
+  email: 'cliff.williams@myplumbers.com',
+  password: '123456',
+  manager: manager,
+  starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,16),
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278721/samples/people/Cliff_Williams.jpg'
+)
 
-puts "create booking"
+user_3 = User.create!(
+  first_name: 'Malcolm',
+  last_name: 'Young',
+  email: 'malcolm.young@myplumbers.com',
+  password: '123456',
+  manager: manager,
+  starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278722/samples/people/Malcolm_Young.jpg'
+)
 
-booking_1 = Booking.create!(start_date: DateTime.new(2019,2,26,9,30), end_date: DateTime.new(2019,2,26,11), intervention: intervention_2, client: client_1, user: user_1)
+puts "create clients ..."
+
+client_1 = Client.create!(
+  first_name: 'Gerard',
+  last_name: 'Dupond',
+  address: '15 Rue De Rivoli, 75004 Paris, France',
+  email: 'g.dupond@mail.com',
+  phone_number: '0175404142')
+
+client_2 = Client.create!(
+  first_name: 'Astrid Delcros',
+  last_name: 'Dupond',
+  address: '25 boulevard de magenta, Paris',
+  email: 'astro@mail.com',
+  phone_number: '0675404142')
+
+client_3 = Client.create!(
+  first_name: 'Bernard',
+  last_name: 'Lama',
+  address: 'parc des princes paris',
+  email: 'lama@mail.com',
+  phone_number: '0345534509')
+
+puts "create bookings ..."
+
+booking_1 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
+  intervention: intervention_1,
+  client: client_1,
+  user: user_1
+)
+
+booking_2 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,30),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
+  intervention: intervention_2,
+  client: client_2,
+  user: user_2
+)
+
+booking_3 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,12,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
+  intervention: intervention_3,
+  client: client_3,
+  user: user_2
+)
+
+booking_3 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,15,00),
+  intervention: intervention_4,
+  client: client_3,
+  user: user_3
+)
 
 

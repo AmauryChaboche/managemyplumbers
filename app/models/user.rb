@@ -27,22 +27,30 @@ class User < ApplicationRecord
   end
 
   def title
-    email
+    first_name
   end
 
   def dow
     [ 1, 2, 3, 4, 5 ]
   end
 
-  def starting_hour
-    '14:00'
+  def start_hour
+    if starting_hour.nil?
+      '9:00'
+    else
+      "#{starting_hour.hour}:00"
+    end
   end
 
-  def ending_hour
-    '18:00'
+  def end_hour
+    if starting_hour.nil?
+      '18:00'
+    else
+      "#{ending_hour.hour}:00"
+    end
   end
 
   def businessHours
-    { start: starting_hour , end: ending_hour }
+    { start: start_hour, end: end_hour }
   end
 end
