@@ -1,13 +1,15 @@
 import "bootstrap";
-
 import { initMapbox } from "../plugins/init_mapbox";
-import "../plugins/flatpickr";
-
+// import "../plugins/flatpickr";
 import { display_calendar } from "../plugins/init_fullcalendar";
 import 'fullcalendar/dist/fullcalendar.css';
 import 'fullcalendar-scheduler/dist/scheduler.css';
+import flatpickr from "flatpickr"
+import "flatpickr/dist/flatpickr.min.css"
+import calendrier from '../plugins/flatpickr';
 
 initMapbox();
+calendrier();
 // if (document.getElementById('calendar') ){
 //   // display_calendar();
 //   $('#calendar').fullCalendar({

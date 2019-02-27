@@ -16,7 +16,9 @@ const getAddress = () => {
 const initMapbox = () => {
   console.log("hello");
 
-  addressInput.addEventListener("keyup", getAddress);
+  if (addressInput) {
+    addressInput.addEventListener("keyup", getAddress);
+  }
 }
 
 
