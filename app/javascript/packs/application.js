@@ -34,3 +34,14 @@ initSelect2();
 $( document ).ready(function() {
     console.log( "ready!" );
 });
+document.addEventListener('DOMContentLoaded', function(){
+    console.log( "ready!2" );
+
+})
+
+const hello = document.querySelector(".fc-cell-content")
+console.log(hello)
+
+console.log('11');
+console.log('yay');
+

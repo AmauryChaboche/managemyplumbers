@@ -124,24 +124,24 @@ booking_1 = Booking.create!(
 )
 
 booking_2 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,30),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
   intervention: intervention_2,
   client: client_2,
   user: user_2
 )
 
 booking_3 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,12,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,30),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
   intervention: intervention_3,
   client: client_3,
   user: user_2
 )
 
 booking_3 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,15,00),
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
   intervention: intervention_4,
   client: client_3,
   user: user_3

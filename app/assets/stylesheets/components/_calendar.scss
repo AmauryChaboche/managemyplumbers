@@ -5,7 +5,9 @@
 //   background-color: white;
 //   height:60px;
 // }
-
+body {
+  background-color: white;
+}
 
 .fc-bg {
   border-radius: 10px;
@@ -18,7 +20,7 @@
   border: none !important;
   border-radius: 8px !important;
   font-size: 16px !important;;
-  height: 48px !important;;
+  height: 88px !important;;
   margin-top: 8px !important;;
 }
 
@@ -32,5 +34,50 @@
 
 .fc-cell-content {
   padding-top: 10px !important;
+}
+
+
+.fc .fc-toolbar > * > :first-child {
+  font-size:0px !important;
+}
+
+
+
+.fc-scroller {
+    background: white !important;
+    border: none !important;
+}
+
+.fc-resource-area, .fc-time-area, .fc-divider {
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+
+.fc-widget-content > * {
+  // height: 500% !important;
+}
+
+.fc-nonbusiness {
+  // margin:8px;
+
+  background: repeating-linear-gradient(
+  45deg,
+  white,
+  white 10px,
+  lightgrey 10px,
+  lightgrey 20px,
+) !important;
+}
+
+.fc-widget-content {
+  background-color: white;
+}
+
+.fc-content {
+  overflow-wrap: break-word !important;
+}
+
+.fc-title {
+  min-width:1px !important;
 }
 
