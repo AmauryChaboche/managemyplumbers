@@ -13,19 +13,45 @@ User.managers.destroy_all
 
 puts "create interventions..."
 
-intervention_1 = Intervention.create!(category: 'Water leak', duration: '30', price: '8000')
-intervention_2 = Intervention.create!(category: 'Blocked toilets', duration: '30', price: '8000')
-intervention_3 = Intervention.create!(category: 'Boiler breakdowns', duration: '45', price: '10000')
-intervention_4 = Intervention.create!(category: 'Heating system problem', duration: '60', price: '12000')
-intervention_5 = Intervention.create!(category: 'Gaz leak', duration: '90', price: '20000')
+intervention_1 = Intervention.create!(
+  category: 'Water leak',
+  duration: '30',
+  price: '80'
+)
 
+intervention_2 = Intervention.create!(
+  category: 'Blocked toilets',
+  duration: '30',
+  price: '90'
+)
 
-puts "create manager..."
+intervention_3 = Intervention.create!(
+  category: 'Boiler breakdowns',
+  duration: '45',
+  price: '100'
+)
+intervention_4 = Intervention.create!(
+  category: 'Heating system problem',
+  duration: '60',
+  price: '120'
+)
 
-manager = User.create!(first_name: 'Angus', last_name: 'Young', email: 'angus.young@myplumbers.com', password: '123456')
+intervention_5 = Intervention.create!(
+  category: 'Gaz leak',
+  duration: '90',
+  price: '200'
+)
 
+puts "create managers..."
 
-puts "create users..."
+manager = User.create!(
+  email: 'amaury.chaboche@gmail.com',
+  password: '123456',
+  first_name: 'Amaury',
+  last_name: 'Chab'
+)
+
+puts "create users ..."
 
 user_1 = User.create!(
   first_name: 'Bon',
@@ -33,8 +59,8 @@ user_1 = User.create!(
   email: 'bon.scott@myplumbers.com',
   password: '123456',
   manager: manager,
-  start_hour:'8:00',
-  end_hour:'16:00'
+  starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,19)
 )
 
 user_2 = User.create!(
@@ -43,8 +69,8 @@ user_2 = User.create!(
   email: 'cliff.williams@myplumbers.com',
   password: '123456',
   manager: manager,
-  start_hour:'10:00',
-  end_hour:'18:00'
+  starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,16)
 )
 
 user_3 = User.create!(
@@ -53,20 +79,65 @@ user_3 = User.create!(
   email: 'malcolm.young@myplumbers.com',
   password: '123456',
   manager: manager,
-  start_hour:'8:00',
-  end_hour:'14:00'
+  starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14)
 )
 
-puts "create client"
+puts "create clients ..."
 
-client_1 = Client.create!(first_name: 'Gerard', last_name: 'Dupond', address: '15 Rue De Rivoli, 75004 Paris, France', email: 'g.dupond@mail.com', phone_number: '0175404142')
+client_1 = Client.create!(
+  first_name: 'Gerard',
+  last_name: 'Dupond',
+  address: '15 Rue De Rivoli, 75004 Paris, France',
+  email: 'g.dupond@mail.com',
+  phone_number: '0175404142')
 
-puts "create booking"
+client_2 = Client.create!(
+  first_name: 'Astrid Delcros',
+  last_name: 'Dupond',
+  address: '25 boulevard de magenta, Paris',
+  email: 'astro@mail.com',
+  phone_number: '0675404142')
 
-booking_1 = Booking.create!(start_date: DateTime.new(2019,2,26,9,30), end_date: DateTime.new(2019,2,26,11), intervention: intervention_2, client: client_1, user: user_1)
+client_3 = Client.create!(
+  first_name: 'Bernard',
+  last_name: 'Lama',
+  address: 'parc des princes paris',
+  email: 'lama@mail.com',
+  phone_number: '0345534509')
 
-manager = User.create!(
-  email: 'amaury.chaboche@gmail.com',
-  password: '123456'
+puts "create bookings ..."
+
+booking_1 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
+  intervention: intervention_1,
+  client: client_1,
+  user: user_1
 )
+
+booking_2 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,30),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
+  intervention: intervention_2,
+  client: client_2,
+  user: user_2
+)
+
+booking_3 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,12,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
+  intervention: intervention_3,
+  client: client_3,
+  user: user_2
+)
+
+booking_3 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,15,00),
+  intervention: intervention_4,
+  client: client_3,
+  user: user_3
+)
+
 
