@@ -10,15 +10,14 @@ import 'fullcalendar-scheduler';
 
 // const display_calendar = () => {
 $(function () {
+  const usersHours = JSON.parse(document.getElementById('calendar').dataset.hours);
   $('#calendar').fullCalendar({
     schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
     defaultView: 'timelineDay',
-    // schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
     events: '/api/v1/bookings',
     resources: '/api/v1/users',
+    nowIndicator: true,
+    contentHeight: 'auto'
   })
 })
-
-// };
-// export { display_calendar }
 
