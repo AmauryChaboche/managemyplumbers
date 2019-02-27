@@ -29,4 +29,20 @@ class User < ApplicationRecord
   def title
     email
   end
+
+  def dow
+    [ 1, 2, 3, 4, 5 ]
+  end
+
+  def starting_hour
+    '14:00'
+  end
+
+  def ending_hour
+    '18:00'
+  end
+
+  def businessHours
+    { start: starting_hour , end: ending_hour }
+  end
 end
