@@ -27,9 +27,35 @@ manager = User.create!(first_name: 'Angus', last_name: 'Young', email: 'angus.yo
 
 puts "create users..."
 
-user_1 = User.create!(first_name: 'Bon', last_name: 'Scott', email: 'bon.scott@myplumbers.com', password: '123456', manager: manager)
-user_2 = User.create!(first_name: 'Cliff', last_name: 'Williams', email: 'cliff.williams@myplumbers.com', password: '123456', manager: manager)
-user_3 = User.create!(first_name: 'Malcolm', last_name: 'Young', email: 'malcolm.young@myplumbers.com', password: '123456', manager: manager)
+user_1 = User.create!(
+  first_name: 'Bon',
+  last_name: 'Scott',
+  email: 'bon.scott@myplumbers.com',
+  password: '123456',
+  manager: manager,
+  start_hour:'8:00',
+  end_hour:'16:00'
+)
+
+user_2 = User.create!(
+  first_name: 'Cliff',
+  last_name: 'Williams',
+  email: 'cliff.williams@myplumbers.com',
+  password: '123456',
+  manager: manager,
+  start_hour:'10:00',
+  end_hour:'18:00'
+)
+
+user_3 = User.create!(
+  first_name: 'Malcolm',
+  last_name: 'Young',
+  email: 'malcolm.young@myplumbers.com',
+  password: '123456',
+  manager: manager,
+  start_hour:'8:00',
+  end_hour:'14:00'
+)
 
 puts "create client"
 
@@ -40,7 +66,7 @@ puts "create booking"
 booking_1 = Booking.create!(start_date: DateTime.new(2019,2,26,9,30), end_date: DateTime.new(2019,2,26,11), intervention: intervention_2, client: client_1, user: user_1)
 
 manager = User.create!(
-  email: 'amury.chaboche@gmail.com',
+  email: 'amaury.chaboche@gmail.com',
   password: '123456'
 )
 
