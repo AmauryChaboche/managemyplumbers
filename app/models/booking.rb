@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :intervention
   belongs_to :client
-  belongs_to :user
+  belongs_to :user, optional: true
 
   def title
     "#{intervention.category} - #{client.last_name}"

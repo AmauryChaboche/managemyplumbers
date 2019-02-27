@@ -1,13 +1,16 @@
 import "bootstrap";
 
 import { initMapbox } from "../plugins/init_mapbox";
+import { chooseAddress } from "../plugins/init_mapbox";
 import "../plugins/flatpickr";
 
 import { display_calendar } from "../plugins/init_fullcalendar";
 import 'fullcalendar/dist/fullcalendar.css';
 import 'fullcalendar-scheduler/dist/scheduler.css';
+import { initSelect2 } from '../plugins/init_select2';
 
 initMapbox();
+initSelect2();
 // if (document.getElementById('calendar') ){
 //   // display_calendar();
 //   $('#calendar').fullCalendar({
@@ -24,3 +27,6 @@ initMapbox();
 // }
 
 
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
