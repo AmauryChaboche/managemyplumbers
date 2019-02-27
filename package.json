@@ -8,7 +8,8 @@
     "fullcalendar": "^3.10.0",
     "fullcalendar-scheduler": "^1.9.4",
     "jquery": "^3.3.1",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "select2": "^4.0.6-rc.1"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"

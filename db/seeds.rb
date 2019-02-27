@@ -36,6 +36,7 @@ intervention_4 = Intervention.create!(
   price: '120'
 )
 
+
 intervention_5 = Intervention.create!(
   category: 'Gaz leak',
   duration: '90',
@@ -48,10 +49,13 @@ manager = User.create!(
   email: 'amaury.chaboche@gmail.com',
   password: '123456',
   first_name: 'Amaury',
-  last_name: 'Chab'
+  last_name: 'Chab',
+  avatar: 'https://avatars0.githubusercontent.com/u/19595651?s=400&amp;u=6d0b4d0e05bcc8da8580be89c53852dd8ffbdc10&amp;v=4'
 )
 
+
 puts "create users ..."
+
 
 user_1 = User.create!(
   first_name: 'Bon',
@@ -60,7 +64,8 @@ user_1 = User.create!(
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
-  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,19)
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,19),
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278765/samples/people/Bon_Scott.jpg'
 )
 
 user_2 = User.create!(
@@ -70,7 +75,8 @@ user_2 = User.create!(
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
-  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,16)
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,16),
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278721/samples/people/Cliff_Williams.jpg'
 )
 
 user_3 = User.create!(
@@ -80,7 +86,8 @@ user_3 = User.create!(
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
-  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14)
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278722/samples/people/Malcolm_Young.jpg'
 )
 
 puts "create clients ..."
