@@ -1,6 +1,6 @@
 class Api::V1::UsersController < Api::V1::BaseController
   def index
-    @users = User.all
+    @users = User.employees
   end
 
   def hours

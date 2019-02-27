@@ -27,7 +27,7 @@ class User < ApplicationRecord
   end
 
   def title
-    first_name
+    "#{first_name}: #{avatar} "
   end
 
   def dow

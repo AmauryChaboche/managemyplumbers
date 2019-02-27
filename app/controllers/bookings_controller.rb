@@ -2,20 +2,6 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
 
-    @users_hours = [
-      {
-      dow: [
-      1,
-      2,
-      3,
-      4,
-      5
-      ],
-      start: "12:00",
-      end: "18:00"
-      }
-    ]
-
     scoring
   end
 
