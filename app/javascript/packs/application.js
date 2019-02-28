@@ -11,12 +11,25 @@ import "flatpickr/dist/flatpickr.min.css"
 import calendrier from '../plugins/flatpickr';
 import { chooseAddress } from "../plugins/init_mapbox";
 import "../plugins/flatpickr";
-import { sweetalert } from '../plugins/sweetalert';
 
 initMapbox();
 calendrier();
 initSelect2();
-sweetalert();
+
+import { sweetalert_simple_validation } from '../plugins/sweetalert';
+if (document.getElementById("sweet-alert-simple_validation")){
+  sweetalert_simple_validation();
+}
+
+import { sweetalert_double_validation } from '../plugins/sweetalert';
+if (document.getElementById("sweet-alert-double_validation")){
+  sweetalert_double_validation();
+}
+
+import { sweetalert_triple_validation } from '../plugins/sweetalert';
+if (document.getElementById("sweet-alert-triple_validation")){
+  sweetalert_triple_validation();
+}
 // if (document.getElementById('calendar') ){
 //   // display_calendar();
 //   $('#calendar').fullCalendar({
