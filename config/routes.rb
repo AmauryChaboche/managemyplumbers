@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :bookings, only: [ :index ]
+      resources :bookings, only: [ :index, :update ]
       resources :users, only: [ :index ]
       get '/users_hours', to: 'users#hours'
     end

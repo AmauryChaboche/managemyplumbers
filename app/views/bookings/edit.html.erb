@@ -1,19 +1,11 @@
 
 <div class="container">
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-<%= simple_form_for([ @booking ]) do |form| %>
-          <%= label_tag 'Plumbers' %>
-          <%= select_tag :fist_name, options_for_select(["user1", "user2", "user3", "user4", "user5", "user6"]),
-          prompt: "Select a Plumber",
-          class: "form-control search-garden-form"
-          %>
-           <% end %>
-          <br>
-    <h3>Intervention Slot</h3>
-
-    <%= simple_form_for :search, method: "get" do |f| %>
-      <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= simple_form_for(@booking) do |f| %>
+      <%= f.association :user, collection: User.all, label: "Plumbers", prompt: "Select a Plumber"%>
+      <h3>Intervention Slot</h3>
+      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.button :submit, "Add", class: "btn btn-primary" %>
     <% end %>
   </div>
