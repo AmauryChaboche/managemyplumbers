@@ -4,7 +4,7 @@ import 'fullcalendar/dist/fullcalendar.css';
 import 'fullcalendar-scheduler/dist/scheduler.css';
 import 'fullcalendar';
 import 'fullcalendar-scheduler';
-
+import swal from 'sweetalert';
 // console.log(moment.now());
 // console.log(moment.now().add(3600, 'seconds'));
 
@@ -49,13 +49,39 @@ if (calendar) {
         console.log(calEvent);
         // console.log(jsEvent);
         // console.log(view);
-        alert(' Client: ' + calEvent.client.first_name + ' ' + calEvent.client.last_name  +
+        const message = ' Client: ' + calEvent.client.first_name + ' ' + calEvent.client.last_name  +
           '\n Category: ' + calEvent.intervention.category +
           '\n Price: ' + calEvent.intervention.price +
           '\n Duration: ' + calEvent.intervention.duration +
-          '\n Address: ' + calEvent.client.address) +
-          '\n Start at: ' + calEvent.start +
-          '\n End at: ' + calEvent.end ;
+          '\n Address: ' + calEvent.client.address ;
+
+        swal({
+          title: "Intervention modification?",
+          text: message,
+          buttons: {
+            cancel: "Run away!",
+            catch: {
+              text: "Throw Pokéball!",
+              value: "catch",
+            },
+            defeat: true,
+          },
+        })
+        .then((value) => {
+          switch (value) {
+
+            case "defeat":
+              window.location = "/clients/new";
+              break;
+
+            case "catch":
+              swal("Gotcha!", "Pikachu was caught!", "success");
+              break;
+
+            default:
+              swal("Got away safely!");
+          }
+        });
       // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
       // alert('View: ' + view.name);
       // // change the border color just for fun

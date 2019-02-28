@@ -30,6 +30,11 @@ import { sweetalert_triple_validation } from '../plugins/sweetalert';
 if (document.getElementById("sweet-alert-triple_validation")){
   sweetalert_triple_validation();
 }
+
+import { sweetalert_triple_validation_full_callendar } from '../plugins/sweetalert';
+if (document.getElementById("sweet-alert-triple_validation_full_callendar")){
+  sweetalert_triple_validation_full_callendar();
+}
 // if (document.getElementById('calendar') ){
 //   // display_calendar();
 //   $('#calendar').fullCalendar({
