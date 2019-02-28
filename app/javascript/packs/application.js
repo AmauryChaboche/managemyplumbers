@@ -13,34 +13,6 @@ import { chooseAddress } from "../plugins/init_mapbox";
 import "../plugins/flatpickr";
 
 initMapbox();
-// calendrier();
+calendrier();
 initSelect2();
-// if (document.getElementById('calendar') ){
-//   // display_calendar();
-//   $('#calendar').fullCalendar({
-//     schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-
-//     events: [
-//       {
-//         title: 'Event Title',
-//         start: 1551193453838,
-//         end: 1551193453839
-//       }
-//     ]
-//   });
-// }
-
-
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
-// document.addEventListener('DOMContentLoaded', function(){
-//     console.log( "ready!2" );
-
-// })
-
-
-
-// console.log('11');
-// console.log('yay');
 

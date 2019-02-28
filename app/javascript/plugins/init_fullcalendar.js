@@ -81,26 +81,30 @@ document.addEventListener('DOMContentLoaded', function(){
 
   $('#calendar').fullCalendar({
     schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-    defaultView: 'timelineDay',
+
     events: '/api/v1/bookings',
     resources: '/api/v1/users',
+    resourceAreaWidth: "20%" ,
+
+    header: {
+      left: 'today prev,next',
+      center: 'title',
+      right: 'timelineDay,timelineWeek'
+    },
+    defaultView: 'timelineDay',
+
     nowIndicator: true,
     contentHeight: 'auto',
     slotDuration:'00:15:00',
     minTime: '09:00:00',
     maxTime: '19:00:00',
     resourceLabelText: 'Plumbers',
-    eventDrop: function(calEvent, jsEvent, ui, view) {
-      // console.log(calEvent);
-      // console.log(jsEvent.target.parentNode);
-      // // alert('toto')
-      // eventFire(jsEvent.target.parentNode, 'click');
+    eventResize: function(calEvent, jsEvent, ui, view) {
       updateEvent(calEvent);
-      // document.querySelectorBy()
-      // alert('toto');
-      // if (confirm) {
-      //   updateEvent(calEvent);
-    } ,
+    },
+    eventDrop: function(calEvent, jsEvent, ui, view) {
+      updateEvent(calEvent);
+    },
     // eventAfterAllRender: displayImage,
     viewRender: displayImage,
 
@@ -119,10 +123,6 @@ document.addEventListener('DOMContentLoaded', function(){
         '\n Address: ' + calEvent.client.address) +
         '\n Start at: ' + calEvent.start +
         '\n End at: ' + calEvent.end ;
-    // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-    // alert('View: ' + view.name);
-    // // change the border color just for fun
-    // $(this).css('border-color', 'red');
 
   }
   })
