@@ -244,11 +244,8 @@ if (calendar) {
             default:
               swal("Got away safely!");
           }
-        });
-
+        })
   }
-
-
 })
 }
 
