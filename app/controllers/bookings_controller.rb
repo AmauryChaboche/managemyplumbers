@@ -23,6 +23,7 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
+    @duration = @booking.intervention.duration
   end
 
   def update
