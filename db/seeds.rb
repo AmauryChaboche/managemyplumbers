@@ -90,6 +90,28 @@ user_3 = User.create!(
   avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278722/samples/people/Malcolm_Young.jpg'
 )
 
+user_4 = User.create!(
+  first_name: 'Bob',
+  last_name: 'Le bricoleur',
+  email: 'bob.lebricoleur@myplumbers.com',
+  password: '123456',
+  manager: manager,
+  starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,20),
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278721/samples/people/Cliff_Williams.jpg'
+)
+
+user_5 = User.create!(
+  first_name: 'Rene',
+  last_name: 'La chacoune',
+  email: 'rene.lachacoune@myplumbers.com',
+  password: '123456',
+  manager: manager,
+  starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
+  ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278722/samples/people/Malcolm_Young.jpg'
+)
+
 puts "create clients ..."
 
 client_1 = Client.create!(
@@ -139,12 +161,28 @@ booking_3 = Booking.create!(
   user: user_2
 )
 
-booking_3 = Booking.create!(
+booking_4 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
   intervention: intervention_4,
-  client: client_3,
+  client: client_2,
   user: user_3
 )
 
+
+booking_5 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,30),
+  intervention: intervention_1,
+  client: client_3,
+  user: user_4
+)
+
+booking_6 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,30),
+  intervention: intervention_5,
+  client: client_1,
+  user: user_5
+)
 

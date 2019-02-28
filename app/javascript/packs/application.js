@@ -39,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 })
 
-const hello = document.querySelector(".fc-cell-content")
-console.log(hello)
+
 
 console.log('11');
 console.log('yay');

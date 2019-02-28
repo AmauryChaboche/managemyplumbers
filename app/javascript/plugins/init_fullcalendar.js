@@ -22,6 +22,19 @@ document.addEventListener('DOMContentLoaded', function(){
     slotDuration:'00:15:00',
     minTime: '09:00:00',
     maxTime: '19:00:00',
+    resourceLabelText: 'Plumbers',
+
+    header: {
+    right: 'timelineDay,agendaFourDay' // buttons for switching between views
+    },
+    views: {
+    agendaFourDay: {
+      type: 'agenda',
+      duration: { hours: 12 },
+      buttonText: 'full day'
+    }
+  },
+
     eventClick: function(calEvent, jsEvent, view) {
       console.log(calEvent);
       console.log(jsEvent);
