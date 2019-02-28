@@ -13,7 +13,7 @@ import { chooseAddress } from "../plugins/init_mapbox";
 import "../plugins/flatpickr";
 
 initMapbox();
-calendrier();
+// calendrier();
 initSelect2();
 // if (document.getElementById('calendar') ){
 //   // display_calendar();
