@@ -1,3 +1,6 @@
+require 'json'
+require 'open-uri'
+
 class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
@@ -20,6 +23,7 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
+    @duration = @booking.intervention.duration
   end
 
   def update
@@ -50,8 +54,5 @@ class BookingsController < ApplicationController
     # On vérfie qu'il ne finit pas après 18H #
     # On renvoie les 2 premiers avec un score entre les 2
     # Lorsqu'il choisit une des deux c'est OK -> elle a le statut VALIDEE
-
-    def calculation(timing, otherzone)
-    end
   end
 end

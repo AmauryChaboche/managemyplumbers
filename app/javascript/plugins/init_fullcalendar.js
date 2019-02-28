@@ -8,9 +8,13 @@ import 'fullcalendar-scheduler';
 // console.log(moment.now());
 // console.log(moment.now().add(3600, 'seconds'));
 
+ // const element = document.getElementById('calendar');
+//  if(element) { }
+
 // const display_calendar = () => {
 document.addEventListener('DOMContentLoaded', function(){
 // $(function () {
+
   const eventFire = (el, etype) => {
     if (el.fireEvent) {
       el.fireEvent('on' + etype);
@@ -124,8 +128,15 @@ document.addEventListener('DOMContentLoaded', function(){
         '\n Start at: ' + calEvent.start +
         '\n End at: ' + calEvent.end ;
 
+
+    const hello = document.querySelectorAll(".fc-scroller")
+    const gg = hello[2]
+    // console.log(hello);
+    // console.log(gg);
   }
+
   })
+
 
 })
 
