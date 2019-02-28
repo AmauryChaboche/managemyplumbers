@@ -28,6 +28,8 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
+    start_date = params[:start_date]
+    booking_params[:start_date]
     @booking.update(booking_params)
   end
 
@@ -40,7 +42,7 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(
-      :intervention_id, :client_id, :user_id, :start_date, :end_date, :urgency, :travel_time
+      :intervention_id, :client_id, :user_id, :start_date, :end_date, :urgency, :travel_time, :id
     )
   end
 

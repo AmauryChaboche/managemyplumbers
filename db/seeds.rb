@@ -65,7 +65,7 @@ user_1 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,19),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278765/samples/people/Bon_Scott.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/bo_5px_solid_rgb:000,r_200/v1551278765/samples/people/Bon_Scott.jpg'
 )
 
 user_2 = User.create!(
@@ -76,7 +76,7 @@ user_2 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,16),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278721/samples/people/Cliff_Williams.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/bo_5px_solid_rgb:000,r_200/v1551374952/samples/people/Cliff_Williams.jpg'
 )
 
 user_3 = User.create!(
@@ -87,7 +87,7 @@ user_3 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278722/samples/people/Malcolm_Young.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/bo_5px_solid_rgb:000,r_235/v1551375240/samples/people/Angus_Young.jpg'
 )
 
 user_4 = User.create!(
@@ -98,7 +98,7 @@ user_4 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,20),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278721/samples/people/Cliff_Williams.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/r_200/v1551375500/samples/people/Denis.jpg'
 )
 
 user_5 = User.create!(
@@ -109,7 +109,7 @@ user_5 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551278722/samples/people/Malcolm_Young.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/bo_5px_solid_rgb:000,r_222/v1551374796/samples/people/Malcolm_Young.jpg'
 )
 
 puts "create clients ..."

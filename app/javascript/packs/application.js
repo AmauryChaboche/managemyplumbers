@@ -13,8 +13,6 @@ import { chooseAddress } from "../plugins/init_mapbox";
 initMapbox();
 initSelect2();
 
-//
-
 bookingDuration();
 // if (document.getElementById('calendar') ){
 //   // display_calendar();
@@ -33,13 +31,4 @@ bookingDuration();
 
 
 
-// document.addEventListener('DOMContentLoaded', function(){
-//     console.log( "ready!2" );
-
-// })
-
-
-
-// console.log('11');
-// console.log('yay');
 
