@@ -85,17 +85,21 @@ document.addEventListener('DOMContentLoaded', function(){
 
   $('#calendar').fullCalendar({
     schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
+    defaultView: 'timelineDay',
+    header: {
+      right: 'today prev,next',
+      center: 'title',
+      left: 'timelineDay'
+    },
 
     events: '/api/v1/bookings',
     resources: '/api/v1/users',
     resourceAreaWidth: "20%" ,
-
-    header: {
-      left: 'today prev,next',
-      center: 'title',
-      right: 'timelineDay,timelineWeek'
+    buttonText: {
+      prev: '<',
+      next: '>'
     },
-    defaultView: 'timelineDay',
+
 
     nowIndicator: true,
     contentHeight: 'auto',
@@ -112,9 +116,9 @@ document.addEventListener('DOMContentLoaded', function(){
     // eventAfterAllRender: displayImage,
     viewRender: displayImage,
 
-    header: {
-    right: 'timelineDay,agendaFourDay' // buttons for switching between views
-    },
+    // header: {
+    // right: 'timelineDay,agendaFourDay' // buttons for switching between views
+    // },
     editable: true,
     eventClick: function(calEvent, jsEvent, view) {
       // console.log(calEvent);
