@@ -7,7 +7,6 @@ class ClientsController < ApplicationController
   def create
     client = Client.create(client_params)
     booking = Booking.create(booking_params.merge(client_id: client.id))
-    raise
     redirect_to edit_booking_path(booking)
   end
 
