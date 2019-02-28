@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function(){
       minTime: '09:00:00',
       maxTime: '19:00:00',
       resourceLabelText: 'Plumbers',
-
       header: {
       right: 'timelineDay,agendaFourDay' // buttons for switching between views
       },
@@ -62,5 +61,6 @@ document.addEventListener('DOMContentLoaded', function(){
     // console.log(hello);
     // console.log(gg);
   }
+
 })
 
