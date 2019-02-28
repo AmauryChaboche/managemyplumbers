@@ -11,10 +11,12 @@ import "flatpickr/dist/flatpickr.min.css"
 import calendrier from '../plugins/flatpickr';
 import { chooseAddress } from "../plugins/init_mapbox";
 import "../plugins/flatpickr";
+import { sweetalert } from '../plugins/sweetalert';
 
 initMapbox();
 calendrier();
 initSelect2();
+sweetalert();
 // if (document.getElementById('calendar') ){
 //   // display_calendar();
 //   $('#calendar').fullCalendar({
@@ -43,4 +45,6 @@ $( document ).ready(function() {
 
 // console.log('11');
 // console.log('yay');
+
+
 

@@ -2,8 +2,17 @@
 // import "flatpickr/dist/flatpickr.min.css" // Note this is important!
 
 const calendrier = () => {
-  const duration = Number.parseInt(document.getElementById("duration").dataset.duration);
-  const start_date = Number.parseInt(document.getElementById("start_date").dataset.start);
+  let duration;
+  let start_date;
+  const durationFromRuby = document.getElementById("duration");
+  if (durationFromRuby) {
+    duration = Number.parseInt(durationFromRuby.dataset.duration);
+  }
+  const startDateFromRuby = document.getElementById("start_date");
+  if (startDateFromRuby) {
+    start_date = Number.parseInt(startDateFromRuby.dataset.start);
+  }
+
   const end_date = start_date + duration;
   console.log(duration);
   console.log(new Date(start_date));
