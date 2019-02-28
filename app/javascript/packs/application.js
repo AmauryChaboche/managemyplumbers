@@ -34,13 +34,13 @@ initSelect2();
 $( document ).ready(function() {
     console.log( "ready!" );
 });
-document.addEventListener('DOMContentLoaded', function(){
-    console.log( "ready!2" );
+// document.addEventListener('DOMContentLoaded', function(){
+//     console.log( "ready!2" );
 
-})
+// })
 
 
 
-console.log('11');
-console.log('yay');
+// console.log('11');
+// console.log('yay');
 
