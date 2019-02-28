@@ -11,6 +11,11 @@ import 'fullcalendar-scheduler';
 // const display_calendar = () => {
 document.addEventListener('DOMContentLoaded', function(){
 // $(function () {
+
+  const updateEvent = (event) => {
+    // console.log(event);
+  }
+
   const usersHours = JSON.parse(document.getElementById('calendar').dataset.hours);
   $('#calendar').fullCalendar({
     schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
@@ -23,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
     minTime: '09:00:00',
     maxTime: '19:00:00',
     resourceLabelText: 'Plumbers',
+    eventDragStop: updateEvent ,
 
     header: {
     right: 'timelineDay,agendaFourDay' // buttons for switching between views
@@ -55,9 +61,11 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   })
 
-  const hello = document.querySelectorAll(".fc-scroller")
-  const gg = hello[2]
+  // const hello = document.querySelectorAll(".fc-scroller")
+  // const gg = hello[2]
   // console.log(hello);
   // console.log(gg);
+
+  // [...temp1.querySelectorAll('tr')].map(line => line.innerText.split(': '));
 })
 
