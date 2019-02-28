@@ -1,5 +1,5 @@
 const booking_duration = () => {
-  const startsAt = document.getElementById('search_starts_at')
+  const startsAt = document.getElementById('booking_start_date')
   startsAt.addEventListener("change", (event) => {
     const duration = Number.parseInt(document.getElementById("duration").dataset.duration);
     const startDate = Date.parse(startsAt.value);
@@ -11,7 +11,7 @@ const booking_duration = () => {
     const hours = endDate.getHours();
     const minutes = endDate.getMinutes();
     const recomposed = `${year}-${month}-${day} ${hours}:${minutes}`;
-    const endAt = document.getElementById('search_ends_at');
+    const endAt = document.getElementById('booking_end_date');
     endAt.value = recomposed;
   })
 }
