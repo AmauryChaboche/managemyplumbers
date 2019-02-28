@@ -22,11 +22,31 @@ document.addEventListener('DOMContentLoaded', function(){
     slotDuration:'00:15:00',
     minTime: '09:00:00',
     maxTime: '19:00:00',
+    resourceLabelText: 'Plumbers',
+
+    header: {
+    right: 'timelineDay,agendaFourDay' // buttons for switching between views
+    },
+    editable: true,
+    views: {
+    agendaFourDay: {
+      type: 'timelineDay',
+      duration: { hours: 12 },
+      buttonText: 'full day'
+    }
+  },
+
     eventClick: function(calEvent, jsEvent, view) {
       console.log(calEvent);
-      console.log(jsEvent);
-      console.log(view);
-      alert(' Client: ' + calEvent.client.first_name + ' ' + calEvent.client.last_name  + '\n Category: ' + calEvent.intervention.category + '\n Price: ' + calEvent.intervention.price + '\n Duration: ' + calEvent.intervention.duration + '\n Address: ' + calEvent.client.address);
+      // console.log(jsEvent);
+      // console.log(view);
+      alert(' Client: ' + calEvent.client.first_name + ' ' + calEvent.client.last_name  +
+        '\n Category: ' + calEvent.intervention.category +
+        '\n Price: ' + calEvent.intervention.price +
+        '\n Duration: ' + calEvent.intervention.duration +
+        '\n Address: ' + calEvent.client.address) +
+        '\n Start at: ' + calEvent.start +
+        '\n End at: ' + calEvent.end ;
     // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
     // alert('View: ' + view.name);
     // // change the border color just for fun
@@ -37,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const hello = document.querySelectorAll(".fc-scroller")
   const gg = hello[2]
-  console.log(hello);
-  console.log(gg);
+  // console.log(hello);
+  // console.log(gg);
 })
 

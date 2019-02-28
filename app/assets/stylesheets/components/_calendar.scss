@@ -20,7 +20,7 @@ body {
   border: none !important;
   border-radius: 8px !important;
   font-size: 16px !important;;
-  height: 88px !important;;
+  height: 66px !important;;
   margin-top: 8px !important;;
 }
 
@@ -33,13 +33,13 @@ body {
 }
 
 .fc-cell-content {
-  padding-top: 10px !important;
+  padding-top: 33px !important;
 }
 
 
-.fc .fc-toolbar > * > :first-child {
-  font-size:0px !important;
-}
+// .fc .fc-toolbar > * > :first-child {
+//   font-size:0px !important;
+// }
 
 
 
@@ -79,5 +79,13 @@ body {
 
 .fc-title {
   min-width:1px !important;
+}
+
+.fc-cell-content {
+  background-color: white;
+}
+
+.fc-widget-header .fc-cell-content {
+  border-bottom: 1px solid lightgrey;
 }
 
