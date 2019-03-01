@@ -28,11 +28,22 @@
   border-radius: 50%;
 }
 
+/* Left section */
+.navbar-wagon-left{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: pink;
+  width : 48%;
+}
+
 /* Right section */
 .navbar-wagon-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: yellow;
+  width : 48%;
 }
 
 /* Basic navbar item */
