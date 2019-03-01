@@ -10,11 +10,11 @@
       <ul id="address-search"></ul>
       <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' } %>
       <%= f.input :urgency, inline_label: 'Urgency', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'booking[urgency]' } %>
-    <div class='match', style="visibility: hidden">
-      <%= f.input :match, inline_label: 'match', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'match' } %>
+      <div class='match', style="visibility: hidden">
+        <%= f.input :match, inline_label: 'match', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'match' } %>
       </div>
-      <%= f.submit 'do it manually' ,class:'btn btn-primary' %>
-      <%= f.button :button, 'find a match' ,class:'btn btn-success'%>
+        <%= f.submit 'do it manually' ,class:'btn btn-primary' %>
+        <%= f.button :button, 'find a match' ,class:'btn btn-success', id:'specialbutton'%>
     <% end %>
  </div>
 </div>
