@@ -33,8 +33,14 @@ if (document.getElementById("sweet-alert-triple_validation_full_callendar")){
   sweetalert_triple_validation_full_callendar();
 }
 
-bookingDuration();
+if (document.getElementById("booking_start_date")) {
+  bookingDuration();
+}
 
+import { findAMatch } from '../plugins/find_a_match';
+if (document.getElementById("new_client_email")) {
+  findAMatch();
+}
 // if (document.getElementById('calendar') ){
 //   // display_calendar();
 //   $('#calendar').fullCalendar({

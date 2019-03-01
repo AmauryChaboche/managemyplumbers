@@ -8,8 +8,9 @@ class BookingSchedulerService
     last_booking = api_call[:last_booking]
     travel_time = api_call[:duration]
     user = last_booking.user
-    start_date = last_booking.end_date + duration
-    end_date = start_date + @new_booking.intervention.duration
+    # last_booking.end_date.to_f
+    start_date = last_booking.end_date + travel_time
+    end_date = start_date + (@new_booking.intervention.duration * 60)
     @new_booking.update(travel_time: travel_time, user_id: user.id, start_date: start_date, end_date: end_date)
   end
 
