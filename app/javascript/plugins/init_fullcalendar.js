@@ -208,44 +208,65 @@ if (calendar) {
     // right: 'timelineDay,agendaFourDay' // buttons for switching between views
     // },
     editable: true,
+
     eventClick: function(calEvent, jsEvent, view) {
-      // console.log(calEvent);
       console.log(calEvent);
-        // console.log(view);
+      // console.log(jsEvent);
+      // console.log(view);
       const message = ' Client: ' + calEvent.client.first_name + ' ' + calEvent.client.last_name  +
         '\n Category: ' + calEvent.intervention.category +
         '\n Price: ' + calEvent.intervention.price +
         '\n Duration: ' + calEvent.intervention.duration +
         '\n Address: ' + calEvent.client.address ;
 
-        swal({
-          title: "Intervention modification?",
-          text: message,
-          buttons: {
-            cancel: "Run away!",
-            catch: {
-              text: "Throw Pokéball!",
-              value: "catch",
-            },
-            defeat: true,
+      swal({
+        title: "Intervention modification?",
+        text: message,
+        buttons: {
+          cancel: "OK",
+          catch: {
+            text: "Update",
+            value: "catch",
           },
-        })
-        .then((value) => {
-          switch (value) {
+          delete: {
+            text: "Delete",
+            value: "delete",
+            dangerMode: true,
+            buttons: true,
+          },
+        },
+      })
+      .then((value) => {
+        switch (value) {
 
-            case "defeat":
-              window.location = "/clients/new";
-              break;
+          case "catch":
+            window.location = "/clients/new";
+            break;
 
-            case "catch":
-              swal("Gotcha!", "Pikachu was caught!", "success");
-              break;
+          case "delete":
+            swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            })
+            .then((willDelete) => {
+              if (willDelete) {
+                swal("Poof! Your imaginary file has been deleted!", {
+                  icon: "success",
+                });
+              } else {
+                swal("Your imaginary file is safe!");
+              }
+            });
+            break;
 
-            default:
-              swal("Got away safely!");
-          }
-        })
-  }
+          default:
+            swal("Got away safely!");
+        }
+      });
+    }
 })
 }
 
