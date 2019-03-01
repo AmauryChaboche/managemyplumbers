@@ -125,47 +125,78 @@ if (calendar) {
     // right: 'timelineDay,agendaFourDay' // buttons for switching between views
     // },
     editable: true,
+
     eventClick: function(calEvent, jsEvent, view) {
-      // console.log(calEvent);
-      // console.log(calEvent);
-        // console.log(view);
+
+    //  console.log(calEvent)
       const book_id = calEvent.id
+
       const message = ' Client: ' + calEvent.client.first_name + ' ' + calEvent.client.last_name  +
         '\n Category: ' + calEvent.intervention.category +
         '\n Price: ' + calEvent.intervention.price + ' €' +
         '\n Duration: ' + calEvent.intervention.duration + ' min' +
         '\n Address: ' + calEvent.client.address ;
 
-        swal({
-          title: "Intervention information",
-          text: message,
-          buttons: {
-            cancel: "OK !",
-            catch: {
-              text: "Update",
-              value: "Update",
-            },
-            defeat: true,
+      const deleteBooking = calEvent.id;
+
+      swal({
+        title: "Booking Information?",
+        text: message,
+        buttons: {
+          cancel: "OK",
+          catch: {
+            text: "Update",
+            value: "catch",
           },
-        })
-        .then((value) => {
-          switch (value) {
+          delete: {
+            text: "Delete",
+            value: "delete",
+            dangerMode: true,
+            buttons: true,
+          },
+        },
+      })
+      .then((value) => {
+        switch (value) {
 
-            case "defeat":
-              window.location = "/clients/new";
-              break;
-
-            case "Update":
+          case "catch":
               console.log(book_id);
               window.location = `/bookings/${book_id}/edit`;
-              break;
+            break;
 
-            default:
-              swal("Got away safely!");
-          }
-        })
-  }
-})
+          case "delete":
+            swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this booking file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            })
+            .then((willDelete) => {
+              if (willDelete) {
+                $.ajax({
+                  headers: {
+                  'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+                  },
+                  url: `/bookings/${deleteBooking}`,
+                  method: 'DELETE',
+                  dataType: 'html',
+                }).done(function(){
+                  window.location.href="/";
+                  });
+              } else {
+                swal("Your Intervention is safe!");
+              }
+            });
+            break;
+
+          default:
+            // swal("Got away safely!");
+        }
+      });
+    }
+  })
+
 }
 
 
