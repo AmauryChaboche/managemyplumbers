@@ -19,7 +19,7 @@ const calendrier = () => {
   console.log(new Date(start_date));
   console.log(new Date(end_date));
 
-
+}
 flatpickr(".datepicker", {
   enableTime: true,
   dateFormat: "Y-m-d H:i",
