@@ -1,6 +1,6 @@
 <div class="container">
   <div class="form-wrapper" style="width: 600px; margin: 0 auto;">
-    <h2>Who is your client?</h2>
+    <h2>Create a new client</h2>
     <%= simple_form_for :new_client, url: clients_path do |f| %>
       <%= f.input :email, placeholder: 'enter email' %>
       <%= f.input :first_name, placeholder: 'enter first name' %>
@@ -13,8 +13,8 @@
     <div class='match', style="visibility: hidden">
       <%= f.input :match, inline_label: 'match', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'match' } %>
       </div>
-      <%= f.submit 'do it manually' %>
-      <%= f.button :button, 'find a match' %>
+      <%= f.submit 'do it manually' ,class:'btn btn-primary' %>
+      <%= f.button :button, 'find a match' ,class:'btn btn-success'%>
     <% end %>
  </div>
 </div>

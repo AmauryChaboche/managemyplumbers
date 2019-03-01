@@ -9,7 +9,7 @@ class ClientsController < ApplicationController
     @booking = Booking.create(booking_params.merge(client_id: client.id))
     if params["match"].present?
       BookingSchedulerService.new(@booking).call
-      raise
+      @booking.save
       redirect_to booking_path(@booking)
     else
       redirect_to edit_booking_path(@booking)
