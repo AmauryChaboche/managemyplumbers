@@ -135,6 +135,21 @@ client_3 = Client.create!(
   email: 'lama@mail.com',
   phone_number: '0345534509')
 
+
+client_4 = Client.create!(
+  first_name: 'Aimé',
+  last_name: 'Jacquet',
+  address: '10 rue de rome 75008 Paris',
+  email: 'aime@mail.com',
+  phone_number: '0345534509')
+
+client_5 = Client.create!(
+  first_name: 'Choupo',
+  last_name: 'Moting',
+  address: '10 boulevard voltaire 75011 Paris',
+  email: 'lama@mail.com',
+  phone_number: '0345534509')
+
 puts "create bookings ..."
 
 booking_1 = Booking.create!(
@@ -154,83 +169,83 @@ booking_2 = Booking.create!(
 )
 
 booking_3 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,30),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
   intervention: intervention_3,
   client: client_3,
-  user: user_2
+  user: user_3
 )
 
 booking_4 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,30),
   intervention: intervention_4,
-  client: client_2,
-  user: user_3
+  client: client_4,
+  user: user_4
 )
 
 
 booking_5 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,30),
-  intervention: intervention_1,
-  client: client_3,
-  user: user_4
-)
-
-booking_6 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,30),
-  intervention: intervention_5,
-  client: client_1,
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,45),
+  intervention: intervention_1,
+  client: client_5,
   user: user_5
 )
 
-booking_7 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,13,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
-  intervention: intervention_1,
-  client: client_1,
-  user: user_1
-)
+# booking_6 = Booking.create!(
+#   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,00),
+#   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,30),
+#   intervention: intervention_5,
+#   client: client_1,
+#   user: user_5
+# )
 
-booking_8 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
-  intervention: intervention_2,
-  client: client_2,
-  user: user_2
-)
+# booking_7 = Booking.create!(
+#   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,13,00),
+#   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
+#   intervention: intervention_1,
+#   client: client_1,
+#   user: user_1
+# )
 
-booking_9 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,30),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
-  intervention: intervention_3,
-  client: client_3,
-  user: user_3
-)
+# booking_8 = Booking.create!(
+#   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
+#   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
+#   intervention: intervention_2,
+#   client: client_2,
+#   user: user_2
+# )
 
-booking_10 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,15,00),
-  intervention: intervention_4,
-  client: client_2,
-  user: user_3
-)
+# booking_9 = Booking.create!(
+#   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,30),
+#   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
+#   intervention: intervention_3,
+#   client: client_3,
+#   user: user_3
+# )
+
+# booking_10 = Booking.create!(
+#   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,00),
+#   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,15,00),
+#   intervention: intervention_4,
+#   client: client_2,
+#   user: user_3
+# )
 
 
-booking_11 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,30),
-  intervention: intervention_1,
-  client: client_3,
-  user: user_4
-)
+# booking_11 = Booking.create!(
+#   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,00),
+#   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,30),
+#   intervention: intervention_1,
+#   client: client_3,
+#   user: user_4
+# )
 
-booking_12 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,17,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,18,30),
-  intervention: intervention_5,
-  client: client_1,
-  user: user_5
-)
+# booking_12 = Booking.create!(
+#   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,17,00),
+#   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,18,30),
+#   intervention: intervention_5,
+#   client: client_1,
+#   user: user_5
+# )
