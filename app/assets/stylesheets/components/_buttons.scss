@@ -1,0 +1,30 @@
+// .btn-medium {
+//   color: #999999;
+//   border: 1px solid #999999;
+//   padding: 10px 15px;
+//   border-radius: 50px;
+//   font-weight: lighter;
+//   opacity: 0.6;
+// }
+// .btn-medium:hover {
+//   opacity: 1;
+//   text-decoration: none;
+//   color: #999999;
+// }
+
+.fc-button {
+  color: white !important;
+  // padding: 10px 15px !important;
+  border-radius: 4px !important;
+  // font-weight: bold !important;
+  background-color: #ff8b00 !important;
+  transition: background 0.3s ease !important;
+}
+.fc-button:hover {
+  opacity: 1 !important;;
+  background: #ff8C10 !important;;
+  text-decoration: none !important;;
+  color: white !important;;
+}
+
+/* Build your own button classes ! */
