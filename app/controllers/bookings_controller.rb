@@ -3,8 +3,8 @@ require 'open-uri'
 
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
 
+    @bookings = Booking.all
     scoring
   end
 
@@ -23,14 +23,17 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
+    @intervention = @booking.intervention
     @duration = @booking.intervention.duration
   end
 
   def update
     @booking = Booking.find(params[:id])
-    start_date = params[:start_date]
-    booking_params[:start_date]
+    # start_date = params[:start_date]
+    # user_id = params[:user_id]
+    # booking_params[:start_date]
     @booking.update(booking_params)
+    redirect_to root_path
   end
 
   def destroy

@@ -1,15 +1,16 @@
 
-<h2>Who is your client?</h2>
-<%= simple_form_for :new_client, url: clients_path do |f| %>
-  <%= f.input :email, placeholder: 'enter email' %>
-  <%= f.input :first_name, placeholder: 'enter first name' %>
-  <%= f.input :last_name, placeholder: 'enter last name' %>
-  <%= f.input :phone_number, placeholder: 'enter phone number' %>
-  <%= f.input :address, placeholder: 'enter address' %>
-  <ul id="address-search"></ul>
-  <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' } %>
-  <%= f.input :urgency, inline_label: 'Urgency', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'booking[urgency]' } %>
-  <%= f.submit 'do it manually' %>
-<% end %>
-
-
+<div class="container">
+  <div class="form-wrapper" style="width: 600px; margin: 0 auto;">
+    <%= simple_form_for :new_client, url: clients_path do |f| %>
+      <%= f.input :email, placeholder: 'enter email' %>
+      <%= f.input :first_name, placeholder: 'enter first name' %>
+      <%= f.input :last_name, placeholder: 'enter last name' %>
+      <%= f.input :phone_number, placeholder: 'enter phone number' %>
+      <%= f.input :address, placeholder: 'enter address' %>
+      <ul id="address-search"></ul>
+      <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' } %>
+      <%= f.input :urgency, inline_label: 'Urgency', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'booking[urgency]' } %>
+      <%= f.submit 'do it manually' %>
+    <% end %>
+  </div>
+</div>
