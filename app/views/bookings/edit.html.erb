@@ -2,14 +2,18 @@
 <div class="container">
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
     <%= simple_form_for(@booking) do |f| %>
-      <%= f.association :user, collection: User.all, label: "Plumbers", prompt: "Select a Plumber"%>
+      <%= f.association :user, collection: User.pluck(:first_name), label: "Plumbers", prompt: "Select a Plumber"%>
       <h3>Intervention Slot</h3>
       <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <% if @booking.start_date != nil %>
+         <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' } %>
+      <% end  %>
       <%= f.button :submit, "Add", class: "btn btn-primary" %>
     <% end %>
   </div>
 <div class="hidden" id="duration" data-duration="<%= @booking.intervention.duration.to_i * 1000 * 60 %>"></div>
 <div class="hidden" id="start_date" data-start="<%= @booking.start_date.to_f * 1000 %>"></div>
-
 </div>
+
+

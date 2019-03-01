@@ -19,8 +19,6 @@ Rails.application.routes.draw do
       get '/users_hours', to: 'users#hours'
     end
   end
-
-
   resources :bookings, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :clients, only: [:new, :create, :edit, :update]
   resources :interventions, only: [:index]
