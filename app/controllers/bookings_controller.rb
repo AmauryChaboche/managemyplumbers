@@ -36,6 +36,9 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.delete
+    redirect_to action: :index, status: 303
+    # binding.pry
+    # raise
   end
 
   private

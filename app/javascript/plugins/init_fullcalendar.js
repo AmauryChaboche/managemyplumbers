@@ -211,16 +211,16 @@ if (calendar) {
 
     eventClick: function(calEvent, jsEvent, view) {
       console.log(calEvent);
-      // console.log(jsEvent);
-      // console.log(view);
       const message = ' Client: ' + calEvent.client.first_name + ' ' + calEvent.client.last_name  +
         '\n Category: ' + calEvent.intervention.category +
         '\n Price: ' + calEvent.intervention.price +
         '\n Duration: ' + calEvent.intervention.duration +
         '\n Address: ' + calEvent.client.address ;
 
+      const deleteBooking = calEvent.id;
+
       swal({
-        title: "Intervention modification?",
+        title: "Booking Information?",
         text: message,
         buttons: {
           cancel: "OK",
@@ -246,28 +246,35 @@ if (calendar) {
           case "delete":
             swal({
             title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
+            text: "Once deleted, you will not be able to recover this booking file!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
             })
             .then((willDelete) => {
               if (willDelete) {
-                swal("Poof! Your imaginary file has been deleted!", {
-                  icon: "success",
-                });
+                $.ajax({
+                  headers: {
+                  'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+                  },
+                  url: `/bookings/${deleteBooking}`,
+                  method: 'DELETE',
+                  dataType: 'html',
+                }).done(function(){
+                  window.location.href="/";
+                  });
               } else {
-                swal("Your imaginary file is safe!");
+                swal("Your Intervention is safe!");
               }
             });
             break;
 
           default:
-            swal("Got away safely!");
+            // swal("Got away safely!");
         }
       });
     }
-})
+  })
 }
 
 
