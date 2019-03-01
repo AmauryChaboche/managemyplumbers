@@ -31,6 +31,7 @@ class BookingsController < ApplicationController
     start_date = params[:start_date]
     booking_params[:start_date]
     @booking.update(booking_params)
+    redirect_to root_path
   end
 
   def destroy
