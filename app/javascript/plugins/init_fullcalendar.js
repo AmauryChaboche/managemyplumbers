@@ -90,7 +90,12 @@ if (calendar) {
 
   $('#calendar').fullCalendar({
     schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
+
+
+
+
     defaultView: 'timelineDay',
+
     header: {
       right: 'today prev,next',
       center: 'title',
@@ -104,7 +109,6 @@ if (calendar) {
       prev: '<',
       next: '>'
     },
-
 
     nowIndicator: true,
     contentHeight: 'auto',
@@ -127,8 +131,6 @@ if (calendar) {
     editable: true,
 
     eventClick: function(calEvent, jsEvent, view) {
-
-    //  console.log(calEvent)
     const number = calEvent.travel_time / 60
     const trav = Math.round( number * 10 ) / 10;
       const book_id = calEvent.id

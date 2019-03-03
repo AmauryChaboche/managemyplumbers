@@ -20,4 +20,15 @@ class Booking < ApplicationRecord
   def resourceId
     user.id
   end
+
+  # def constraint
+  #   array = []
+  #   user_array = User.all
+  #   user_array.map do |user|
+  #     array << user[:id]
+  #   end
+  #   hash_hours = {
+  #     resourceIds: array
+  #   }
+  # end
 end
