@@ -8,6 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: fixed;
+  transform: translateY(0px);
+  z-index: 5;
+  background-size: cover;
+  width: 100%
 }
 
 /* Logo */
@@ -22,11 +28,25 @@
   border-radius: 50%;
 }
 
+/* Left section */
+.navbar-wagon-left{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // background-color: pink;
+  width : 48%;
+  z-index: 6;
+  position: relative;
+  // animation: slidein 5s ease-in 1s infinite running;
+}
+
 /* Right section */
 .navbar-wagon-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  // background-color: yellow;
+  width : 48%;
 }
 
 /* Basic navbar item */

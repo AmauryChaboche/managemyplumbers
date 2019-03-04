@@ -80,9 +80,9 @@ user_2 = User.create!(
 )
 
 user_3 = User.create!(
-  first_name: 'Malcolm',
+  first_name: 'Angus',
   last_name: 'Young',
-  email: 'malcolm.young@myplumbers.com',
+  email: 'angus.young@myplumbers.com',
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
@@ -102,9 +102,9 @@ user_4 = User.create!(
 )
 
 user_5 = User.create!(
-  first_name: 'Rene',
-  last_name: 'La chacoune',
-  email: 'rene.lachacoune@myplumbers.com',
+  first_name: 'Malcolm',
+  last_name: 'Young',
+  email: 'malcolm.young@myplumbers.com',
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
