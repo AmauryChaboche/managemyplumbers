@@ -1,11 +1,37 @@
 .svg-background {
   width: 100%;
   position: absolute;
+  top: 0px;
 
 }
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  z-index: 2;
+}
+
+.avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.navbar-left{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // background-color: pink;
+  width : 48%;
+  z-index: 6;
+  position: relative;
+  // animation: slidein 5s ease-in 1s infinite running;
+}
+
+/* Right section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
