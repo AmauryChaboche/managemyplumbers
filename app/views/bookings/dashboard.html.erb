@@ -12,6 +12,25 @@
         <%= employee.turnover %> € generated
         <%= employee.bookings.size %> interventions realized
       </div>
+      <div class="message">
+        <img class="avatar-large" src="<%= employee.avatar %>">
+        <div class="message-name">
+          <h3><%= employee.first_name %> <%= employee.last_name %></h3>
+          <p>10/07/17</p>
+        </div>
+        <div class="message-body">
+          <p><strong>Number of interventions done</strong></p>
+          <p> <%= employee.bookings.size %></p>
+          <p> Mail - Telephone - Texto  fontawesome à ajouter</p>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Turnover</p>
+          <p class="price"><strong><%= employee.turnover %> €</strong></p>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
+
+
+
