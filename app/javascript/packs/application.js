@@ -1,11 +1,11 @@
 import "bootstrap";
 import { initMapbox } from "../plugins/init_mapbox";
 
-import Chartkick from "chartkick";
-window.Chartkick = Chartkick;
+// import Chartkick from "chartkick";
+// window.Chartkick = Chartkick;
 
-import Chart from "chart.js";
-Chartkick.addAdapter(Chart);
+// import Chart from "chart.js";
+// Chartkick.addAdapter(Chart);
 
 
 
