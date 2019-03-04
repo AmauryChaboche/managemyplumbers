@@ -157,7 +157,8 @@ booking_1 = Booking.create!(
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
   intervention: intervention_1,
   client: client_1,
-  user: user_1
+  user: user_1,
+  planified: true,
 )
 
 booking_2 = Booking.create!(
@@ -165,7 +166,8 @@ booking_2 = Booking.create!(
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
   intervention: intervention_2,
   client: client_2,
-  user: user_2
+  user: user_2,
+  planified: true,
 )
 
 booking_3 = Booking.create!(
@@ -173,7 +175,8 @@ booking_3 = Booking.create!(
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
   intervention: intervention_3,
   client: client_3,
-  user: user_3
+  user: user_3,
+  planified: true,
 )
 
 booking_4 = Booking.create!(
@@ -181,7 +184,8 @@ booking_4 = Booking.create!(
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14,30),
   intervention: intervention_4,
   client: client_4,
-  user: user_4
+  user: user_4,
+  planified: true,
 )
 
 
@@ -190,16 +194,17 @@ booking_5 = Booking.create!(
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,45),
   intervention: intervention_1,
   client: client_5,
+  planified: true,
   user: user_5
 )
 
-# booking_6 = Booking.create!(
-#   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,00),
-#   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,30),
-#   intervention: intervention_5,
-#   client: client_1,
-#   user: user_5
-# )
+booking_6 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day + 1,9,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,30),
+  intervention: intervention_5,
+  client: client_1,
+  user: user_5
+)
 
 # booking_7 = Booking.create!(
 #   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,13,00),

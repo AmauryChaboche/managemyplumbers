@@ -3,7 +3,6 @@ require 'open-uri'
 
 class BookingsController < ApplicationController
   def index
-
     @bookings = Booking.all
     scoring
   end
@@ -32,7 +31,12 @@ class BookingsController < ApplicationController
     # start_date = params[:start_date]
     # user_id = params[:user_id]
     # booking_params[:start_date]
-    @booking.update(booking_params)
+    if @booking.planified
+      @booking.update(booking_params)
+    else
+      @booking.planified = true
+      @booking.save!
+    end
     redirect_to bookings_path
   end
 
@@ -44,13 +48,10 @@ class BookingsController < ApplicationController
     # raise
   end
 
-
   private
 
   def booking_params
-    params.require(:booking).permit(
-      :intervention_id, :client_id, :user_id, :start_date, :end_date, :urgency, :travel_time, :id
-    )
+    params.require(:booking).permit(:intervention_id, :client_id, :user_id, :start_date, :end_date, :urgency, :travel_time, :id, :planified)
   end
 
   def scoring

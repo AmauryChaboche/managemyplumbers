@@ -1,15 +1,12 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>Dispatch Board</h1>
-    </div>
-    <div class="col-xs-12">
-      <div id='calendar' data-hours="<%= @users_hours.to_json %>"></div>
-    </div>
-    <div class="col-xs-12">
-      <br>
-      <br>
+
+<%= render layout: "layouts/main_layout", locals: {main_title: "Dispatch Board"} do %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id='calendar'>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
 

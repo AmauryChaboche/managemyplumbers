@@ -33,6 +33,16 @@ if (calendar) {
     return string;
   };
 
+//   const bookingAnimation = document.getElementById('intervention.created_at').last.animate(
+//     { transform: background: #3CB371 !important;
+//     });
+
+// const bookingAnimation = document.getElementById('fc-timeline-event fc-h-event fc-event fc-start fc-end fc-draggable fc-resizable').last.animate(
+//     { transform: background: green !important;
+//     });
+
+
+
   $.ajaxSetup({
     headers: {
       'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
@@ -69,6 +79,7 @@ if (calendar) {
   const displayImage = () => {
     const hello = document.querySelectorAll(".fc-scroller");
     const gg = [].slice.call(hello)
+    console.log(hello)
     // console.log(hello);
     const gg2 = gg[2];
     // console.log(gg[2]);
@@ -85,14 +96,8 @@ if (calendar) {
     });
   }
 
-
-  const usersHours = JSON.parse(document.getElementById('calendar').dataset.hours);
-
   $('#calendar').fullCalendar({
     schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-
-
-
 
     defaultView: 'timelineDay',
 
@@ -116,6 +121,7 @@ if (calendar) {
     minTime: '09:00:00',
     maxTime: '19:00:00',
     resourceLabelText: 'Plumbers',
+    eventColor: "#ff8b00",
     eventResize: function(calEvent, jsEvent, ui, view) {
       updateEvent(calEvent);
     },
@@ -124,7 +130,7 @@ if (calendar) {
     },
     // eventAfterAllRender: displayImage,
     viewRender: displayImage,
-
+    refetchResourcesOnNavigate: true,
     // header: {
     // right: 'timelineDay,agendaFourDay' // buttons for switching between views
     // },
@@ -190,7 +196,7 @@ if (calendar) {
                   window.location.href="/";
                   });
               } else {
-                swal("Your Intervention is safe!");
+                // swal("Your Intervention is safe!");
               }
             });
             break;
