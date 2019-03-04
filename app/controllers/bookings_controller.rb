@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
     # user_id = params[:user_id]
     # booking_params[:start_date]
     @booking.update(booking_params)
-    redirect_to root_path
+    redirect_to bookings_path
   end
 
   def destroy
