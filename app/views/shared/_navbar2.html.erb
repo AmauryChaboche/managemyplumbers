@@ -1,0 +1,8 @@
+<div class="navbar">
+  <% if user_signed_in? %>
+    <!-- Links when logged in -->
+    <%= link_to "my employees", "#" %>
+    <%= link_to "Add an intervention", new_client_path, class: "call-to-action" %>
+    <%= image_tag current_user.avatar %>
+  <% end %>
+</div>
