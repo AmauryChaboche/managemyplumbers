@@ -1,7 +1,7 @@
 class Api::V1::BookingsController < Api::V1::BaseController
   def index
     # we get use the latest booking created
-    @bookings = Booking.all.order(:created_at)
+    @bookings = Booking.all.order(:updated_at)
   end
 
   private

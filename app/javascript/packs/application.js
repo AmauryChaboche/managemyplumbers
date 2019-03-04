@@ -1,6 +1,15 @@
 import "bootstrap";
 import { initMapbox } from "../plugins/init_mapbox";
 
+import Chartkick from "chartkick";
+window.Chartkick = Chartkick;
+
+import Chart from "chart.js";
+Chartkick.addAdapter(Chart);
+
+
+
+
 import "../plugins/flatpickr";
 import { display_calendar } from "../plugins/init_fullcalendar";
 import 'fullcalendar/dist/fullcalendar.css';
