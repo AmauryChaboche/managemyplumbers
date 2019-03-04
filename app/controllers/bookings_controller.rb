@@ -37,7 +37,7 @@ class BookingsController < ApplicationController
       @booking.planified = true
       @booking.save!
     end
-    redirect_to root_path
+    redirect_to bookings_path
   end
 
   def dashboard

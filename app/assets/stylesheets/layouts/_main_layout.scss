@@ -1,7 +1,30 @@
-.main-titles-cont {
 
+.main-titles-container {
+  padding: 0px;
+  // display:flex;
+  // justify-content: space-between;
 }
 
 .main-page-title {
+  padding-top: 90px;
+  margin-top: 0px;
+  position: relative;
+  z-index: 3;
+  color: white;
+  font-weight: 900;
+}
 
+.main-container {
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.index-date {
+  padding-top: 90px;
+  margin-top: 0px;
+  position: relative;
+  z-index: 3;
+  color: white;
+  font-weight: 900;
 }

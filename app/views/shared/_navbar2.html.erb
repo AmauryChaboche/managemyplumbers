@@ -1,8 +1,17 @@
-<div class="navbar">
-  <% if user_signed_in? %>
-    <!-- Links when logged in -->
-    <%= link_to "my employees", "#" %>
-    <%= link_to "Add an intervention", new_client_path, class: "call-to-action" %>
-    <%= image_tag current_user.avatar %>
-  <% end %>
+<!-- <div class="container">
+ -->  <div class="navbar container">
+    <div class="navbar-left hidden-xs hidden-sm">
+      <%= link_to root_path, class: "navbar-wagon-brand" do %>
+        <%= image_tag('plumber.svg', height: 50, class: "truck_to_go") %>
+      <% end %>
+    </div>
+    <div class="navbar-right hidden-xs hidden-sm">
+      <% if user_signed_in? %>
+        <!-- Links when logged in -->
+        <%= link_to "my employees", "#" %>
+        <%= link_to "Add an intervention", new_client_path, class: "call-to-action" %>
+        <%= image_tag current_user.avatar, class: "avatar" %>
+      <% end %>
+<!--     </div>
+ -->  </div>
 </div>
