@@ -1,17 +1,3 @@
-// .btn-medium {
-//   color: #999999;
-//   border: 1px solid #999999;
-//   padding: 10px 15px;
-//   border-radius: 50px;
-//   font-weight: lighter;
-//   opacity: 0.6;
-// }
-// .btn-medium:hover {
-//   opacity: 1;
-//   text-decoration: none;
-//   color: #999999;
-// }
-
 .fc-button {
   color: white !important;
   // padding: 10px 15px !important;
@@ -28,3 +14,10 @@
 }
 
 /* Build your own button classes ! */
+
+.call-to-action {
+  background-color: #0FFF95;
+  color: #1B998B;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
