@@ -1,22 +1,21 @@
-<div class="container">
-  <div class="form-wrapper" style="width: 600px; margin: 0 auto;">
-    <h2>Create a new client</h2>
-    <%= simple_form_for :new_client, url: clients_path do |f| %>
-      <%= f.input :email, placeholder: 'enter email' %>
-      <%= f.input :first_name, placeholder: 'enter first name' %>
-      <%= f.input :last_name, placeholder: 'enter last name' %>
-      <%= f.input :phone_number, placeholder: 'enter phone number' %>
-      <%= f.input :address, placeholder: 'enter address' %>
-      <ul id="address-search"></ul>
-      <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' } %>
-      <%= f.input :urgency, inline_label: 'Urgency', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'booking[urgency]' } %>
-      <div class='match', style="visibility: hidden">
-        <%= f.input :match, inline_label: 'match', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'match' } %>
-      </div>
-        <%= f.submit 'do it manually' ,class:'btn btn-primary' %>
-        <%= f.button :button, 'find a match' ,class:'btn btn-success', id:'specialbutton'%>
-    <% end %>
- </div>
-</div>
-
-
+<%= render layout: "layouts/main_layout", locals: {main_title: "Create a new client"} do %>
+  <div class="container">
+    <div class="form-wrapper" style="width: 600px; margin: 0 auto;">
+      <%= simple_form_for :new_client, url: clients_path do |f| %>
+        <%= f.input :email, placeholder: 'enter email' %>
+        <%= f.input :first_name, placeholder: 'enter first name' %>
+        <%= f.input :last_name, placeholder: 'enter last name' %>
+        <%= f.input :phone_number, placeholder: 'enter phone number' %>
+        <%= f.input :address, placeholder: 'enter address' %>
+        <ul id="address-search"></ul>
+        <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' } %>
+        <%= f.input :urgency, inline_label: 'Urgency', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'booking[urgency]' } %>
+        <div class='match', style="visibility: hidden">
+          <%= f.input :match, inline_label: 'match', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'match' } %>
+        </div>
+          <%= f.submit 'do it manually' ,class:'btn btn-primary' %>
+          <%= f.button :button, 'find a match' ,class:'btn btn-success', id:'specialbutton'%>
+      <% end %>
+   </div>
+  </div>
+<% end %>
