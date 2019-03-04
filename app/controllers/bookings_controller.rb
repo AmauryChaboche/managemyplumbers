@@ -40,6 +40,24 @@ class BookingsController < ApplicationController
     redirect_to root_path
   end
 
+  def dashboard
+    @bookings = Booking.where(planified: true)
+    @employees = current_user.employees
+    @employees.each do |employee|
+      turnover = 0
+      employee.first_name
+      employee.last_name
+      employee.bookings.each do |book|
+        turnover += book.intervention.price
+      end
+      employee[:turnover] = turnover
+    end
+    @pie_data = []
+    @employees.each do |l|
+      @pie_data << [l.first_name, l.turnover]
+    end
+  end
+
   def destroy
     @booking = Booking.find(params[:id])
     @booking.delete
@@ -52,15 +70,5 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:intervention_id, :client_id, :user_id, :start_date, :end_date, :urgency, :travel_time, :id, :planified)
-  end
-
-  def scoring
-    # On regarde si tout le monde a une intervention VALIDEE
-    # On récupère la dernière intervention VALIDEE de la journée pour chaque USER
-    # On calcule le temps pour aller du point I au point souhaite pour CHAQUE LAST INTERVENTION
-    # On les classe par temps minimal pour y aller
-    # On vérfie qu'il ne finit pas après 18H #
-    # On renvoie les 2 premiers avec un score entre les 2
-    # Lorsqu'il choisit une des deux c'est OK -> elle a le statut VALIDEE
   end
 end
