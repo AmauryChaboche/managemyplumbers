@@ -1,0 +1,34 @@
+// .Capa_1 {
+//   // transition: slidein 5s ease-in 1s infinite running;
+//   -webkit-animation: slidein 5s ease-in 1s infinite running;
+// }
+// @keyframes slidein {
+// //   from { transform: scaleX(0); }
+// //   to { transform: scaleX(1); }
+// // }
+
+@keyframes slidein {
+  from { left:0;
+    delay: 15s;
+    opacity: 1;
+  }
+  to { left: 40vw;
+    opacity: 0;
+   }
+}
+.truck_to_go {
+  animation: slidein 15s ease-in 2s infinite;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  // animation-play-state: initial, infinite;
+  // animation-iteration-count: infinite;
+  // animation-name: slidein;
+  // animation-iteration-count: infinite;
+  // linear infinite running;
+
+  // background-color: red;
+  display: block;
+  position: relative;
+}
+

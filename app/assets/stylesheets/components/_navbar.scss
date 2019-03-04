@@ -33,8 +33,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: pink;
+  // background-color: pink;
   width : 48%;
+  z-index: 6;
+  position: relative;
+  // animation: slidein 5s ease-in 1s infinite running;
 }
 
 /* Right section */
@@ -42,7 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: yellow;
+  // background-color: yellow;
   width : 48%;
 }
 
