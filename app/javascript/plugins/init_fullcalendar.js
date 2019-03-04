@@ -188,7 +188,7 @@ if (calendar) {
                   window.location.href="/";
                   });
               } else {
-                swal("Your Intervention is safe!");
+                // swal("Your Intervention is safe!");
               }
             });
             break;
