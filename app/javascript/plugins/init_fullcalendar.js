@@ -69,6 +69,7 @@ if (calendar) {
   const displayImage = () => {
     const hello = document.querySelectorAll(".fc-scroller");
     const gg = [].slice.call(hello)
+    console.log(hello)
     // console.log(hello);
     const gg2 = gg[2];
     // console.log(gg[2]);
@@ -90,9 +91,6 @@ if (calendar) {
 
   $('#calendar').fullCalendar({
     schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-
-
-
 
     defaultView: 'timelineDay',
 
@@ -124,7 +122,7 @@ if (calendar) {
     },
     // eventAfterAllRender: displayImage,
     viewRender: displayImage,
-
+    refetchResourcesOnNavigate: true,
     // header: {
     // right: 'timelineDay,agendaFourDay' // buttons for switching between views
     // },
