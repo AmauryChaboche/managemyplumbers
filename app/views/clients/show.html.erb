@@ -1,0 +1,38 @@
+<h1> HELLO </h1>
+<%= @client.first_name %>
+<%= @client.last_name %>
+<%= @client.address %>
+<br>
+<br>
+<% count = 0  %>
+<h2>Available spots</h2>
+<% if @bookings.size == 2 %>
+  <% @bookings.each do |booking| %>
+    <h2>Spot : </h2>
+    <% count += 1 %>
+    <%= booking.start_date %> //
+    <%= booking.end_date %> //
+    <%= booking.intervention.duration %> //
+    <%= booking.intervention.category %> //
+    <%= booking.user.first_name %> //
+    <% if count == 1  %>
+      <p>First optimization match</p>
+      <%= link_to "Choose perfect match", booking_path(booking.id) , method: :patch , class:'btn btn-success' %>
+    <% else %>
+      <p>Second optimization match</p>
+      <%= link_to "Choose 2nd match", booking_path(booking.id) , method: :patch , class:'btn btn-success'%>
+    <% end %>
+  <% end %>
+<% else %>
+  <% @bookings.each do |booking| %>
+  <p>Urgent : First available spot</p>
+    <%= booking.start_date %> //
+    <%= booking.end_date %> //
+    <%= booking.intervention.duration %> //
+    <%= booking.intervention.category %> //
+    <%= booking.user.first_name %> //
+    <br>
+    <%= link_to "URGENT", booking_path(booking.id) , method: :patch , class:'btn btn-success'%>
+  <% end  %>
+  <br>
+<% end %>

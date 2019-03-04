@@ -79,6 +79,7 @@ if (calendar) {
   const displayImage = () => {
     const hello = document.querySelectorAll(".fc-scroller");
     const gg = [].slice.call(hello)
+    console.log(hello)
     // console.log(hello);
     const gg2 = gg[2];
     // console.log(gg[2]);
@@ -129,7 +130,7 @@ if (calendar) {
     },
     // eventAfterAllRender: displayImage,
     viewRender: displayImage,
-
+    refetchResourcesOnNavigate: true,
     // header: {
     // right: 'timelineDay,agendaFourDay' // buttons for switching between views
     // },
@@ -195,7 +196,7 @@ if (calendar) {
                   window.location.href="/";
                   });
               } else {
-                swal("Your Intervention is safe!");
+                // swal("Your Intervention is safe!");
               }
             });
             break;
