@@ -33,6 +33,16 @@ if (calendar) {
     return string;
   };
 
+//   const bookingAnimation = document.getElementById('intervention.created_at').last.animate(
+//     { transform: background: #3CB371 !important;
+//     });
+
+// const bookingAnimation = document.getElementById('fc-timeline-event fc-h-event fc-event fc-start fc-end fc-draggable fc-resizable').last.animate(
+//     { transform: background: green !important;
+//     });
+
+
+
   $.ajaxSetup({
     headers: {
       'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
@@ -85,14 +95,8 @@ if (calendar) {
     });
   }
 
-
-  const usersHours = JSON.parse(document.getElementById('calendar').dataset.hours);
-
   $('#calendar').fullCalendar({
     schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-
-
-
 
     defaultView: 'timelineDay',
 
@@ -116,6 +120,7 @@ if (calendar) {
     minTime: '09:00:00',
     maxTime: '19:00:00',
     resourceLabelText: 'Plumbers',
+    eventColor: "#ff8b00",
     eventResize: function(calEvent, jsEvent, ui, view) {
       updateEvent(calEvent);
     },

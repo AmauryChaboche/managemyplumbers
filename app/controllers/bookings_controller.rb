@@ -3,7 +3,6 @@ require 'open-uri'
 
 class BookingsController < ApplicationController
   def index
-
     @bookings = Booking.all
     scoring
   end
