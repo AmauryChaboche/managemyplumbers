@@ -1,5 +1,8 @@
 <div class="card">
-<%= @booking.start_date %>
-<%= @booking.user.first_name %>
-<%= @booking.client.address %>
+<p>start date: <%= @booking.start_date %></p>
+<p><%= @booking.client.address %></p>
+<p><%= @booking.intervention.category %></p>
+<p><%= @booking.intervention.duration %></p>
+<p><%= @booking.travel_time %></p>
 </div>
+<div><%= link_to "See the shcedule", root_path %></div>
