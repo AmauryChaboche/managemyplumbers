@@ -1,7 +1,18 @@
-.main-titles-cont {
-
+.main-titles-container {
+  padding: 0px;
 }
 
 .main-page-title {
+  padding-top: 90px;
+  margin-top: 0px;
+  position: relative;
+  z-index: 3;
+  color: white;
+  font-weight: 900;
+}
 
+.main-container {
+  background-color: white;
+  position: relative;
+  z-index: 2;
 }
