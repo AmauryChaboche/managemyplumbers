@@ -7,11 +7,17 @@ class ClientsController < ApplicationController
   def create
     client = Client.create(client_params)
     @booking = Booking.create(booking_params.merge(client_id: client.id))
+    @booking2 = Booking.create(booking_params.merge(client_id: client.id))
+    @booking3 = Booking.create(booking_params.merge(client_id: client.id))
 
     if params["match"].present?
       BookingSchedulerService.new(@booking).call
-      @booking.save
-      redirect_to booking_path(@booking)
+      BookingSchedulerService.new(@booking2).call2
+      BookingSchedulerService.new(@booking3).call3
+      @booking.save!
+      @booking2.save!
+      @booking3.save!
+      redirect_to client_path(@booking.client_id)
     else
       redirect_to edit_booking_path(@booking)
     end
@@ -24,6 +30,11 @@ class ClientsController < ApplicationController
   def update
     @client = Client.find(params[:id])
     @garden.update(client_params)
+  end
+
+  def show
+    @client = Client.find(params[:id])
+    @bookings = Booking.where(client_id: @client.id)
   end
 
   private
