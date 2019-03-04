@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Manage my Plumbers</title>
-    <link rel="icon" sizes="192x192" href="https://res.cloudinary.com/dvsxgvwog/image/upload/v1551454328/samples/people/plumber_ico.ico">
+    <link rel="icon" sizes="32x32" href="https://res.cloudinary.com/dvsxgvwog/image/upload/v1551708605/samples/people/plumber_ico.ico">
+
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -15,6 +16,7 @@
     <%= render 'shared/navbar2' %>
     <%= render 'shared/flashes' %>
       <%= yield %>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

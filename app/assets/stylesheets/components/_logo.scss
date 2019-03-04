@@ -1,0 +1,52 @@
+// .Capa_1 {
+//   // transition: slidein 5s ease-in 1s infinite running;
+//   -webkit-animation: slidein 5s ease-in 1s infinite running;
+// }
+// @keyframes slidein {
+// //   from { transform: scaleX(0); }
+// //   to { transform: scaleX(1); }
+// // }
+
+@keyframes slidein {
+  0% { left:0;
+    opacity: 1;
+  }
+  50% { left:0;
+    opacity: 1;
+  }
+
+  75% { left:40vw;
+    opacity: 0;
+  }
+  89% { left: 40vw;
+    opacity: 0;
+   }
+  90% { left: 0;
+    opacity: 0,2;
+   }
+  93% { left: 0;
+    opacity: 0,2;
+   }
+  97% { left: 0;
+    opacity: 0,5;
+   }
+  100% { left: 0;
+    opacity: 0,8;
+   }
+}
+.truck_to_go {
+  animation: slidein 15s ease-in 2s infinite;
+  animation-delay: 20s;
+  animation-fill-mode: both;
+  animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  // animation-play-state: initial, infinite;
+  // animation-iteration-count: infinite;
+  // animation-name: slidein;
+  // animation-iteration-count: infinite;
+  // linear infinite running;
+
+  // background-color: red;
+  display: block;
+  position: relative;
+}
+
