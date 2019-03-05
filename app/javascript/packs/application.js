@@ -3,6 +3,7 @@ import { initMapbox } from "../plugins/init_mapbox";
 
 import 'select2/dist/css/select2.css';
 
+
 import "../plugins/flatpickr";
 import { display_calendar } from "../plugins/init_fullcalendar";
 import 'fullcalendar/dist/fullcalendar.css';

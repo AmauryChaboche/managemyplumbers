@@ -36,7 +36,6 @@ intervention_4 = Intervention.create!(
   price: '120'
 )
 
-
 intervention_5 = Intervention.create!(
   category: 'Gaz leak',
   duration: '90',
@@ -53,9 +52,7 @@ manager = User.create!(
   avatar: 'https://avatars0.githubusercontent.com/u/19595651?s=400&amp;u=6d0b4d0e05bcc8da8580be89c53852dd8ffbdc10&amp;v=4'
 )
 
-
 puts "create users ..."
-
 
 user_1 = User.create!(
   first_name: 'Bon',
@@ -203,6 +200,7 @@ booking_6 = Booking.create!(
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,30),
   intervention: intervention_5,
   client: client_1,
+  planified: true,
   user: user_5
 )
 

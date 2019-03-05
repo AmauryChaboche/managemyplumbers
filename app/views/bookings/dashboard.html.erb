@@ -1,0 +1,36 @@
+<div class="container">
+  <h1> Dashboard</h1>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= pie_chart @pie_data %>
+    </div>
+    <% @employees.each do |employee| %>
+      <div class="col-xs-12">
+        <% turnover = 0 %>
+        <%= employee.first_name %>
+        <%= employee.last_name %>
+        <%= employee.turnover %> € generated
+        <%= employee.bookings.size %> interventions realized
+      </div>
+      <div class="message">
+        <img class="avatar-large" src="<%= employee.avatar %>">
+        <div class="message-name">
+          <h3><%= employee.first_name %> <%= employee.last_name %></h3>
+          <p>10/07/17</p>
+        </div>
+        <div class="message-body">
+          <p><strong>Number of interventions done</strong></p>
+          <p> <%= employee.bookings.size %></p>
+          <p> Mail - Telephone - Texto  fontawesome à ajouter</p>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Turnover</p>
+          <p class="price"><strong><%= employee.turnover %> €</strong></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+

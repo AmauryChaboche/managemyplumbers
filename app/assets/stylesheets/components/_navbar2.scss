@@ -6,9 +6,15 @@
 }
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   z-index: 2;
+  padding-left: 0px !important;
+  a {
+    margin-left: 20px;
+  }
+  img {
+    margin-left: 20px;
+  }
 }
 
 .avatar {
