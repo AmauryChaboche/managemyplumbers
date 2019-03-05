@@ -22,4 +22,13 @@
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 10px;
+  border-color: #0FFF95;
+  :focus {
+    text-decoration: none !important;
+    outline: none !important;
+  }
+}
+
+a:hover {
+  color: #1B998B;
 }
