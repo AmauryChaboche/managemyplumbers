@@ -4,6 +4,13 @@
 
 <div class="container main-titles-container">
   <h1 class="main-page-title"><%= main_title %></h1>
+  <% if main_date.present? %>
+    <div class="main-page-buttons">
+      <div class="button-left"><i class="fas fa-chevron-left"></i></div>
+          <%= main_date %>
+      <div class="button-right"><i class="fas fa-chevron-right"></i></div>
+    </div>
+  <% end %>
 </div>
 
 <div class="container main-container">

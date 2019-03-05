@@ -1,11 +1,14 @@
 import "bootstrap";
 import { initMapbox } from "../plugins/init_mapbox";
 
+import 'select2/dist/css/select2.css';
+
 import "../plugins/flatpickr";
 import { display_calendar } from "../plugins/init_fullcalendar";
 import 'fullcalendar/dist/fullcalendar.css';
 import 'fullcalendar-scheduler/dist/scheduler.css';
 import { initSelect2 } from '../plugins/init_select2';
+import { initAutocomplete } from '../plugins/init_autocomplete';
 
 import bookingDuration from '../plugins/booking_duration';
 import { chooseAddress } from "../plugins/init_mapbox";
@@ -14,6 +17,7 @@ import { myChart } from '../plugins/init_chart';
 
 initMapbox();
 initSelect2();
+initAutocomplete();
 
 import { sweetalert_simple_validation } from '../plugins/sweetalert';
 if (document.getElementById("sweet-alert-simple_validation")){
