@@ -9,11 +9,16 @@
   border-bottom: none;
 }
 .message-body {
+  padding-left:80px;
   flex-grow: 1;
 }
+.message-elements {
+  min-width:200px;
+  padding-right: 80px;
+}
 .message-name {
-  padding-left: 10px;
-  min-width: 100px;
+  padding-left: 50px;
+  min-width: 160px;
 }
 .message-name h3 {
   font-size: 13px;
@@ -25,6 +30,12 @@
   opacity: 0.6;
   margin-top: 5px;
 }
+// .message-elements p {
+//   font-size: 13px;
+//   font-weight: lighter;
+//   opacity: 0.6;
+//   margin-top: 5px;
+// }
 .message-body {
   padding-left: 10px;
   font-size: 13px;
@@ -46,7 +57,8 @@
   font-weight: bold;
 }
 .status.accepted {
-  color: #04A366;
+  color: red;
+  opacity:0.8;
 }
 .status.declined {
   color: red;
@@ -54,3 +66,20 @@
 .status.pending {
   color: lightgrey;
 }
+.avatar-large {
+  width: 56px;
+  border-radius: 50%;
+}
+.dashicon {
+  color:rgb(27, 153, 139);
+  opacity:0.7;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+.dashicon:hover {
+  color:rgb(27, 153, 139);
+  font-size:1.05em;
+  opacity:1;
+  text-decoration: none;
+}
+
