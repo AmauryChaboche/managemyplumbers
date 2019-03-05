@@ -1,0 +1,60 @@
+.matchresults {
+  background-color: #ececec;
+  margin-bottom: 20px;
+  // margin-left: 518px;
+  max-width: 600px;
+  position: relative;
+  min-height:180px;
+  border-radius: 6px;
+  opacity:0.9;
+  transition: 0.7s ease;
+}
+
+.matchresults:hover{
+  opacity:1;
+}
+
+.matchresults h2 {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.top-right-element {
+  position: absolute;
+  top:60px;
+  right:30px;
+}
+.top-right-element p {
+  padding-top:7px;
+}
+
+// .matchbutton {
+//   position: absolute;
+//   bottom:20px;
+//   right: 400px;
+// }
+// rgb(27, 153, 139)
+// #1B998B
+// #0FFF95
+
+.client-info {
+  border-radius: 6px;
+  background-color:#ececec;
+  min-height:400px;
+  max-width: 420px;
+  margin-right:80px;
+  margin-top:40px;
+  padding-top: 5px;
+  padding-left: 25px;
+  margin-left: 30px;
+}
+
+.client-info h3 {
+  font-weight: bolder;
+}
+
+.matchbutton {
+  font-color: darkgrey;
+}
+
+
