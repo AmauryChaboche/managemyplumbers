@@ -8,7 +8,7 @@
     <% if user_signed_in? %>
       <!-- Links when logged in -->
       <%= link_to "Add an intervention", new_client_path, class: "call-to-action" %>
-      <%= link_to "my employees", bookings_dashboard_path, class: "specific_link" %>
+      <%= link_to "Dashboard", bookings_dashboard_path, class: "specific_link" %>
       <%= image_tag current_user.avatar, class: "avatar" %>
     <% end %>
   </div>
