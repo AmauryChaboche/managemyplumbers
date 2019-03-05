@@ -3,12 +3,13 @@
   // padding: 10px 15px !important;
   border-radius: 4px !important;
   // font-weight: bold !important;
-  background-color: #ff8b00 !important;
+  background-color: rgb(27, 153, 139) !important;
   transition: background 0.3s ease !important;
+  opacity:0.7;
 }
 .fc-button:hover {
   opacity: 1 !important;;
-  background: #ff8C10 !important;;
+  background: rgb(27, 153, 139) !important;;
   text-decoration: none !important;;
   color: white !important;;
 }
@@ -22,6 +23,15 @@
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 10px;
+  border-color: #0FFF95;
+  :focus {
+    text-decoration: none !important;
+    outline: none !important;
+  }
+}
+
+a:hover {
+  color: #1B998B;
 }
 
 .btn-success {

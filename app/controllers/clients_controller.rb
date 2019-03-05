@@ -41,7 +41,7 @@ class ClientsController < ApplicationController
 
   def show
     @client = Client.find(params[:id])
-    @bookings = Booking.where(client_id: @client.id)
+    @bookings = Booking.where(client_id: @client.id, planified: false)
   end
 
   private

@@ -55,58 +55,58 @@ manager = User.create!(
 puts "create users ..."
 
 user_1 = User.create!(
-  first_name: 'Bon',
-  last_name: 'Scott',
-  email: 'bon.scott@myplumbers.com',
+  first_name: 'Mario',
+  last_name: 'Bros',
+  email: 'mario@myplumbers.com',
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,19),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/bo_5px_solid_rgb:000,r_200/v1551278765/samples/people/Bon_Scott.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Mario_avatar.svg'
 )
 
 user_2 = User.create!(
-  first_name: 'Cliff',
-  last_name: 'Williams',
-  email: 'cliff.williams@myplumbers.com',
+  first_name: 'Luigi',
+  last_name: 'Bros',
+  email: 'luigi@myplumbers.com',
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,16),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/bo_5px_solid_rgb:000,r_200/v1551374952/samples/people/Cliff_Williams.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Luigi_avatar.svg'
 )
 
 user_3 = User.create!(
-  first_name: 'Angus',
-  last_name: 'Young',
-  email: 'angus.young@myplumbers.com',
+  first_name: 'Wario',
+  last_name: 'Bros',
+  email: 'wario@myplumbers.com',
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/bo_5px_solid_rgb:000,r_235/v1551375240/samples/people/Angus_Young.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Wario_avatar.svg'
 )
 
 user_4 = User.create!(
-  first_name: 'Bob',
-  last_name: 'Le bricoleur',
-  email: 'bob.lebricoleur@myplumbers.com',
+  first_name: 'Warluigi',
+  last_name: 'Bros',
+  email: 'warluigi@myplumbers.com',
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,20),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/r_200/v1551375500/samples/people/Denis.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Warluigi_avatar.svg'
 )
 
 user_5 = User.create!(
-  first_name: 'Malcolm',
-  last_name: 'Young',
-  email: 'malcolm.young@myplumbers.com',
+  first_name: 'Minion',
+  last_name: 'Minion',
+  email: 'minion@myplumbers.com',
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/bo_5px_solid_rgb:000,r_222/v1551374796/samples/people/Malcolm_Young.jpg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Minion_avatar.svg'
 )
 
 puts "create clients ..."
