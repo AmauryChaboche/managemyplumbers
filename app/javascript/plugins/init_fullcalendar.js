@@ -102,7 +102,7 @@ if (calendar) {
     defaultView: 'timelineDay',
 
     header: {
-      right: 'today prev,next',
+      right: `prev, today next`,
       center: 'title',
       left: 'timelineDay'
     },

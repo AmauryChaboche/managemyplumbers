@@ -51,10 +51,14 @@ class BookingsController < ApplicationController
       end
       employee[:turnover] = turnover
     end
-    @pie_data = []
+    @name_data = []
+    @turnover_data = []
     @employees.each do |l|
-      @pie_data << [l.first_name, l.turnover]
+      @name_data << l.first_name
+      @turnover_data << l.turnover
     end
+    @names = @name_data.join('-')
+    @turnover = @turnover_data.join('-')
   end
 
   def destroy

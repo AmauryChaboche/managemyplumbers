@@ -1,36 +1,35 @@
 <div class="container">
   <h1> Dashboard</h1>
   <div class="row">
-    <div class="col-xs-12">
-      <%= pie_chart @pie_data %>
+    <div class="col-xs-6 col-xs-offset-3">
+      <canvas id="myChart" width="800" height="800" data-names="<%=@names%>" data-turnover="<%=@turnover%>"></canvas>
     </div>
+  </div>
+  <div class="row">
     <% @employees.each do |employee| %>
-      <div class="col-xs-12">
-        <% turnover = 0 %>
-        <%= employee.first_name %>
-        <%= employee.last_name %>
-        <%= employee.turnover %> € generated
-        <%= employee.bookings.size %> interventions realized
-      </div>
       <div class="message">
         <img class="avatar-large" src="<%= employee.avatar %>">
         <div class="message-name">
           <h3><%= employee.first_name %> <%= employee.last_name %></h3>
-          <p>10/07/17</p>
         </div>
         <div class="message-body">
-          <p><strong>Number of interventions done</strong></p>
-          <p> <%= employee.bookings.size %></p>
-          <p> Mail - Telephone - Texto  fontawesome à ajouter</p>
+          <p># of interventions</p>
+          <p><strong><%= employee.bookings.size %> done last week</strong></p>
+        </div>
+        <div class="message-elements">
+          <p>
+            <a href="#" target="_blank"><i class="fas fa-phone telephone dashicon"></i></a> &nbsp; &nbsp;
+            <a href="#" target="_blank"><i class="fas fa-at mail dashicon"></i> </a> &nbsp; &nbsp;
+            <a href="#" target="_blank"><i class="fas fa-comment sms dashicon"></i></a> &nbsp;
+          </p>
         </div>
         <div class="message-status">
-          <p class="status pending">Turnover</p>
+          <p class="status accepted">Turnover</p>
           <p class="price"><strong><%= employee.turnover %> €</strong></p>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
 
 

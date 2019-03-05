@@ -4,6 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "bootstrap": "3.4.0",
+    "chart.js": "^2.7.3",
     "flatpickr": "^4.5.4",
     "fullcalendar": "^3.10.0",
     "fullcalendar-scheduler": "^1.9.4",
