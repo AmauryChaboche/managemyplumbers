@@ -28,7 +28,6 @@ class ClientsController < ApplicationController
       @booking = Booking.create(booking_params.merge(client_id: client.id))
       redirect_to edit_booking_path(@booking)
     end
-
   end
 
   def edit
@@ -42,7 +41,7 @@ class ClientsController < ApplicationController
 
   def show
     @client = Client.find(params[:id])
-    @bookings = Booking.where(client_id: @client.id)
+    @bookings = Booking.where(client_id: @client.id, planified: false)
   end
 
   private

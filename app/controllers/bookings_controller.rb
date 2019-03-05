@@ -3,6 +3,7 @@ require 'open-uri'
 
 class BookingsController < ApplicationController
   def index
+    Booking.where(planified: false).destroy_all
     @bookings = Booking.all
   end
 
@@ -37,6 +38,7 @@ class BookingsController < ApplicationController
     else
       @booking.planified = true
       @booking.save!
+      current_user.bookings.where(planified: false).destroy_all
     end
     redirect_to bookings_path
   end
@@ -67,8 +69,6 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.delete
     redirect_to action: :index, status: 303
-    # binding.pry
-    # raise
   end
 
   private
