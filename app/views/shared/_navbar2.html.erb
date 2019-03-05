@@ -7,7 +7,7 @@
   <div class="navbar-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "my employees", "#" %>
+      <%= link_to "my employees", bookings_dashboard_path %>
       <%= link_to "Add an intervention", new_client_path, class: "call-to-action" %>
       <%= image_tag current_user.avatar, class: "avatar" %>
     <% end %>
