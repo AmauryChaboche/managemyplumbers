@@ -1,5 +1,5 @@
-<%= render layout: "layouts/main_layout", locals: {main_title: "Dispatch Board"} do %>
-  <div class="container">
+<%= render layout: "layouts/main_layout", locals: {main_title: "Dispatch Board", main_date: Time.now.strftime(' %A, %B %e')} do %>
+  <div class="main-container">
     <div class="row">
       <div class="col-xs-12">
         <div id='calendar'>
