@@ -13,10 +13,11 @@
 
   </head>
   <body>
-    <%= render 'shared/navbar2' %>
-    <%= render 'shared/flashes' %>
+    <% if controller_name != "pages" %>
+      <%= render 'shared/navbar2' %>
+    <% end %>
+      <%= render 'shared/flashes' %>
       <%= yield %>
-    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

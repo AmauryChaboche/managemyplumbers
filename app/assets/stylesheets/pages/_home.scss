@@ -1,1 +1,45 @@
 // Specific CSS for your home-page
+.home-container {
+  background-image: image-url("background.jpeg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.svg-home-page {
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+}
+ .home-container-2 {
+  background-image: image-url("svg_home_page.svg");
+  background-size: cover;
+  height: 100vh;
+  width: 90%;
+  padding-left: 77px;
+}
+
+.navbar-home {
+ padding-top: 20px;
+}
+
+.home-title {
+  color: white;
+  padding-top: 80px;
+  h1 {
+  font-size: 65px;
+  font-weight: 1000;
+  }
+}
+
+#CTA-homepage {
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 225px;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.button-homepage {
+  margin-top: 37px;
+}
