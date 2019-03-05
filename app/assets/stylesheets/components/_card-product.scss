@@ -54,3 +54,14 @@
 .status.pending {
   color: lightgrey;
 }
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.otherpage {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
