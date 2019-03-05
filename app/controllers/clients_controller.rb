@@ -22,6 +22,7 @@ class ClientsController < ApplicationController
         redirect_to client_path(@booking.client_id)
       end
     else
+      @booking = Booking.create(booking_params.merge(client_id: client.id))
       redirect_to edit_booking_path(@booking)
     end
   end
