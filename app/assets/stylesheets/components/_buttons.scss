@@ -33,3 +33,28 @@
 a:hover {
   color: #1B998B;
 }
+
+.btn-success {
+  background-color: #0FFF95 !important;
+  border-radius: 10px;
+  border: 1px solid #0FFF95;
+}
+.btn-success:hover {
+  font-size: 20px;
+}
+
+.btn-manual {
+  background-color: white;
+  color: #0FFF95;
+  border-color: #0FFF95;
+  border: 1px solid #0FFF95;
+  padding: 5px;
+  border-radius: 10px;
+}
+.btn-manual:hover {
+  font-size: 20px;
+}
+
+.form-group {
+  border-radius: 10px;
+}
