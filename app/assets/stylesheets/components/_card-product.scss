@@ -4,6 +4,17 @@
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
+  transition: all .2s ease-in-out;
+}
+.message:hover {
+  transform: scale(1.01);
+}
+
+.message-border {
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
 }
 .message:last-child {
   border-bottom: none;
@@ -15,6 +26,7 @@
 .message-elements {
   min-width:200px;
   padding-right: 80px;
+  padding-top: 20px;
 }
 .message-name {
   padding-left: 50px;
@@ -22,6 +34,7 @@
 }
 .message-name h3 {
   font-size: 13px;
+  padding-bottom: 20px;
   margin-bottom: 0px;
 }
 .message-name p {
@@ -30,6 +43,13 @@
   opacity: 0.6;
   margin-top: 5px;
 }
+.message-ranking{
+  // padding-left: 20px;
+  padding-right:20px;
+}
+.checked {
+  color: orange;
+}
 // .message-elements p {
 //   font-size: 13px;
 //   font-weight: lighter;
@@ -37,14 +57,15 @@
 //   margin-top: 5px;
 // }
 .message-body {
-  padding-left: 10px;
+  padding-left: 30px;
   font-size: 13px;
   color: rgba(0,0,0,0.7);
+  text-align: center;
 }
-.message-body {
-  padding-left: 20px;
-  color: rgba(0,0,0,0.4);
-}
+// .message-body {
+//   padding-left: 20px;
+//   color: rgba(0,0,0,0.4);
+// }
 .message-body strong{
   color: rgba(0,0,0,0.9);
   color: rgba(0,0,0,0.9);
@@ -55,6 +76,8 @@
 .message-status {
   font-size: 14px;
   font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
 }
 .status.accepted {
   color: red;
