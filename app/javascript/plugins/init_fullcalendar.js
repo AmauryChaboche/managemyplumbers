@@ -194,9 +194,9 @@ if (calendar) {
                   },
                   url: `/bookings/${deleteBooking}`,
                   method: 'DELETE',
-                  dataType: 'html',
+                  dataType: 'json',
                 }).done(function(){
-                  window.location.href="/";
+                  window.location.href="/bookings";
                   });
               } else {
                 // swal("Your Intervention is safe!");

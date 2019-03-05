@@ -1,7 +1,14 @@
-<div class="container">
-
-  <div class="home_page_body">
-    <h1>Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-container">
+  <div class="home-container-2">
+    <div class="navbar-home">
+    <%= image_tag('plumber.svg', height: 70, class: "truck_to_go") %>
+    </div>
+    <div class="home-title">
+      <h1>Manage my plumbers</h1>
+      <h3>Dispatching your plumbers has never been so easy !</h3>
+      <div class="button-homepage">
+        <%= link_to "Start now", bookings_path, class: "call-to-action", id:"CTA-homepage" %>
+      </div>
+    </div>
   </div>
 </div>

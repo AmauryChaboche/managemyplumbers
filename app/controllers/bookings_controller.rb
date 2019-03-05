@@ -68,7 +68,12 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.delete
-    redirect_to action: :index, status: 303
+
+    respond_to do |format|
+      format.html { redirect_to bookings_path }
+      format.json { head 204 }
+    end
+
   end
 
   private
