@@ -4,7 +4,7 @@
     <%= simple_form_for :new_client, url: clients_path do |f| %>
       <div class="form-group string required new_client_first_name">
         <%= label_tag :new_client_email, "Email", class: "form-control-label string required" %>
-        <%= select_tag "new_client[email]", options_for_select(Client.all.map { |client| [client.email, { "data-client" => client.to_json }] }),
+        <%= select_tag "new_client[email]", options_for_select(Client.all.order(:email).map { |client| [client.email, { "data-client" => client.to_json }] }),
           prompt: "enter email", class: 'form-control select2-autocomplete'%>
       </div>
 

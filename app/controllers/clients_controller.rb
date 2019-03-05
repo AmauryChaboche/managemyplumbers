@@ -5,7 +5,10 @@ class ClientsController < ApplicationController
   end
 
   def create
-    client = Client.create(client_params)
+    client = Client.find_by(email: client_params[:email]) || Client.new
+    client.assign_attributes(client_params)
+    client.save
+
     if params["match"].present?
       if booking_params[:urgency]
         @booking3 = Booking.create(booking_params.merge(client_id: client.id))

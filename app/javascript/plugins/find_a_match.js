@@ -6,7 +6,6 @@ const findAMatch = () => {
     match.checked = true;
   }
   const button = document.querySelector("#specialbutton")
-  console.log(button);
   button.addEventListener('click', changeMatchAsTrue);
 }
 
