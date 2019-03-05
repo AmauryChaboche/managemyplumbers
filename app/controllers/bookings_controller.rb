@@ -23,6 +23,8 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @intervention = @booking.intervention
     @duration = @booking.intervention.duration
+    @booking.planified = true
+    @booking.save
   end
 
   def update
