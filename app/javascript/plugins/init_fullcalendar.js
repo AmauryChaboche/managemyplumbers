@@ -110,7 +110,9 @@ if (calendar) {
 
     defaultView: 'timelineDay',
 
+
     header: false,
+
 
     events: '/api/v1/bookings',
     resources: '/api/v1/users',
