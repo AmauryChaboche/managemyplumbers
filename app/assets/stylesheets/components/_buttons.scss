@@ -31,17 +31,20 @@
   }
 }
 
-a:hover {
-  color: #1B998B;
-}
+// a:hover {
+//   color: #1B998B;
+// }
 
 .btn-success {
   background-color: #0FFF95 !important;
   border-radius: 10px;
   border: 1px solid #0FFF95;
 }
-.btn-success:hover {
-  font-size: 20px;
+// .btn-success:hover {
+//   font-size: 20px;
+// }
+.specialbutton {
+  padding-bottom: 4px;
 }
 
 .btn-manual {
@@ -51,10 +54,12 @@ a:hover {
   border: 1px solid #0FFF95;
   padding: 5px;
   border-radius: 10px;
+  height: 39px;
+  padding-top: 3px;
 }
-.btn-manual:hover {
-  font-size: 20px;
-}
+// .btn-manual:hover {
+//   font-size: 20px;
+// }
 
 .form-group {
   border-radius: 10px;
