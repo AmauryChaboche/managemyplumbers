@@ -1,4 +1,4 @@
-<%= render layout: "layouts/main_layout", locals: {main_title: "Create a new client"} do %>
+<%= render layout: "layouts/main_layout", locals: {main_title: "Create a new client", main_date: ""} do %>
   <div class="container">
     <div class="form-wrapper" style="width: 600px; margin: 0 auto;">
       <%= simple_form_for :new_client, url: clients_path do |f| %>

@@ -1,8 +1,11 @@
 
 .main-titles-container {
   padding: 0px;
-  // display:flex;
-  // justify-content: space-between;
+  display:flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+  align-content: center;
+  font-family: nunito;
 }
 
 .main-page-title {
@@ -12,19 +15,35 @@
   z-index: 3;
   color: white;
   font-weight: 900;
+  flex-grow: 1;
 }
 
 .main-container {
   background-color: white;
   position: relative;
   z-index: 2;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.index-date {
+.main-page-buttons {
   padding-top: 90px;
   margin-top: 0px;
   position: relative;
   z-index: 3;
   color: white;
   font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+.button-left {
+  decoration: none !important;
+  cursor: pointer;
+  padding-right: 10px;
+}
+.button-right {
+  decoration: none !important;
+  cursor: pointer;
+  padding-left: 10px;
 }

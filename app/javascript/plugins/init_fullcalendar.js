@@ -15,7 +15,16 @@ import swal from 'sweetalert';
 let calendar = document.getElementById('calendar');
 if (calendar) {
 
+    const buttonRight = document.querySelector('.button-right');
+    const buttonLeft = document.querySelector('.button-left');
 
+    buttonRight.addEventListener('click', event => {
+      $('#calendar').fullCalendar('getCalendar').next();
+    });
+
+    buttonLeft.addEventListener('click', event => {
+      $('#calendar').fullCalendar('getCalendar').prev();
+    });
 
   const eventFire = (el, etype) => {
     if (el.fireEvent) {
@@ -101,20 +110,12 @@ if (calendar) {
 
     defaultView: 'timelineDay',
 
-    header: {
-      right: 'today prev,next',
-      center: 'title',
-      left: 'timelineDay'
-    },
+    header: false,
 
     events: '/api/v1/bookings',
     resources: '/api/v1/users',
     resourceAreaWidth: "20%" ,
-    buttonText: {
-      prev: '<',
-      next: '>'
-    },
-
+    buttonText: false,
     nowIndicator: true,
     contentHeight: 'auto',
     slotDuration:'00:15:00',
