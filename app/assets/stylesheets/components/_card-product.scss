@@ -60,8 +60,11 @@
   justify-content: space-between;
 }
 
-.otherpage {
-  display: flex;
-  width: 50%;
-  align-items: center;
+.client-card {
+display: flex;
+justify-content: align-items;
+grid-template-columns: 1fr 1fr;
+width: 500px;
+height: 400px;
+padding: 20px;
 }
