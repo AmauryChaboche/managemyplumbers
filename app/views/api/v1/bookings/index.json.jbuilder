@@ -5,5 +5,3 @@ json.array! @bookings do |booking|
   json.color "#0FFF95" if @bookings.last == booking
 end
 
-
-
