@@ -1,6 +1,6 @@
 .client-info {
   border-radius: 6px;
-  background-color:#ececec;
+  background-color: #ededed;
   min-height:400px;
   max-width: 527px;
   margin-right:30px;
@@ -8,14 +8,15 @@
   padding-left: 25px;
   margin-left: 30px;
   margin-top:10px;
+  margin-bottom:10px;
 }
 .matchresults {
-  background-color: #ececec;
+  background-color: #ededed;
   margin-bottom: 10px;
   margin-top:10px;
   max-width: 527px;
   position: relative;
-  min-height:190px;
+  min-height:195px;
   border-radius: 6px;
   opacity:0.9;
   transition: 0.7s ease;

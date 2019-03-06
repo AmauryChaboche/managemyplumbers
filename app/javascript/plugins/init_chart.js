@@ -116,11 +116,17 @@ if (dashboard) {
             display: false,
             fontColor: 'black',
             defaultFontFamily: "Nunito",
+          },
+          title: {
+            display: true,
+            text: 'Week turnover',
+            fontSize: 24
           }
       },
       centerText: {
         display: true,
-        text: `${total} € Turnover`
+        text: `${total}€`,
+        fontSize: 24
       }
   });
 };
@@ -151,14 +157,10 @@ function drawTotals(chart) {
 
     var text = chart.config.centerText.text,
     textX = Math.round((width - ctx.measureText(text).width) / 2),
-    textY = (height / 2);
+    textY = (height / 2) + 20;
 
     ctx.fillText(text, textX, textY);
     ctx.save();
-}
+};
 
-// window.onload = function() {
-//     var ctx = document.getElementById("chart-area").getContext("2d");
-//     window.myDoughnut = new Chart(ctx, config);
-// };
 

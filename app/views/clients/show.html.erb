@@ -9,6 +9,7 @@
         <strong><em><h3>Booking information</h3></em></strong>
         <p><i class="fas fa-wrench"></i> <%= @bookings[0].intervention.category%></p>
         <p><i class="fas fa-hourglass-start"></i>  <%= @bookings[0].intervention.duration%> minutes</p>
+        <p><i class="fas fa-money-bill-alt"></i></i>  <%= @bookings[0].intervention.price%> €</p>
 
       </div>
       <div class="col-xs-6">
@@ -28,7 +29,6 @@
             <div class="matchbutton">
               <%= link_to "Book this slot", booking_path(booking.id) , method: :patch , class:'call-to-action' %>
             </div>
-
           </div>
           <% end %>
         <% else %>
