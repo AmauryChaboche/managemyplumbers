@@ -1,6 +1,5 @@
 <%= render layout: "layouts/main_layout", locals: {main_title: "Dashboard", main_date: ""} do %>
   <div class="container">
-
     <div class="row dashboard-row">
 
       <div class="col-xs-7 col-sm-7 col-xs-offset-0 col-sm-offset-0 ">
@@ -23,13 +22,14 @@
               </div>
               <div class="message-elements">
                 <p>
-                  <a href="#" target="_blank"><i class="fas fa-phone telephone dashicon"></i></a> &nbsp; &nbsp;
-                  <a href="#" target="_blank"><i class="fas fa-at mail dashicon"></i> </a> &nbsp; &nbsp;
+                  <a href="#" target="_blank"><i class="fas fa-phone telephone dashicon"></i></a> &nbsp;
+                  <a href="#" target="_blank"><i class="fas fa-at mail dashicon"></i> </a> &nbsp;
                   <a href="#" target="_blank"><i class="fas fa-comment sms dashicon"></i></a> &nbsp;
                 </p>
               </div>
             </div>
-            <div class="message-ranking">
+            <div class="message-body">
+              <p>Client satisfaction</p>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
@@ -37,7 +37,7 @@
               <span class="fa fa-star"></span>
             </div>
             <div class="message-body">
-              <p># of interventions</p>
+              <p>Interventions</p>
               <p><strong><%= employee.bookings.size %> done last week</strong></p>
             </div>
             <div class="message-status">

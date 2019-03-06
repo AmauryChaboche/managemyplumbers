@@ -13,6 +13,13 @@
   position: sticky;
 }
 
+.wheel-box h2 {
+  font-size: 2em;
+  justify: center;
+  font-weight : lighter;
+  margin-bottom: 0px;
+}
+
 /* The Box */
 .message {
   display: flex;
@@ -23,6 +30,12 @@
 }
 .message:hover {
   transform: scale(1.01);
+}
+.message h2 {
+  font-size: 2em;
+  justify: center;
+  font-weight : lighter;
+  margin-bottom: 0px;
 }
 
 .message-border {
@@ -38,21 +51,26 @@
 /* ################ Iddentity block ################*/
 .message-iddentity{
   display: block;
-  // align-items: center;
+  align-items: center;
   text-align: center;
+  padding-left: 20px;
+  min-width: 120px;
   padding-right: 10px;
+  // height: 60px;
 
 }
 
 /* #### Name #### */
 .message-name {
-  // padding-left: 50px;
-  min-width: 160px;
+  text-align: center;
+
+  // margin-top: 15px;
 }
 .message-name h3 {
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: bolder;
   // padding-bottom: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 8px;
 }
 .message-name p {
   font-size: 13px;
@@ -65,7 +83,7 @@
 .message-elements {
   width: auto;
   // padding-right: 80px;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 // .message-elements p {
 //   font-size: 13px;
@@ -91,6 +109,13 @@
   padding-left: 10px;
   padding-right:10px;
   font-size: 0.8em;
+  text-align: center;
+}
+.message-ranking p {
+  font-size: 13px;
+  font-weight: lighter;
+  // opacity: 0.6;
+  text-align: center;
 }
 .checked {
   color: orange;
@@ -99,10 +124,12 @@
 /* ################ Message Body block ################*/
 .message-body {
   padding-left: 10px;
-  font-size: 13px;
+  font-size: 0.8em;
   color: rgba(0,0,0,0.7);
   text-align: center;
   flex-grow: 1;
+  margin-bottom: 0;
+  height: 55px;
 }
 // .message-body {
 //   padding-left:80px;
