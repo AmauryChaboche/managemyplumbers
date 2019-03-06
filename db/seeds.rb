@@ -122,14 +122,14 @@ client_2 = Client.create!(
   first_name: 'Astrid Delcros',
   last_name: 'Dupond',
   address: '25 boulevard de magenta, Paris',
-  email: 'astro@mail.com',
+  email: 'astro.delcros@mail.com',
   phone_number: '0675404142')
 
 client_3 = Client.create!(
   first_name: 'Bernard',
   last_name: 'Lama',
   address: 'parc des princes paris',
-  email: 'lama@mail.com',
+  email: 'barnard.lama@mail.com',
   phone_number: '0345534509')
 
 
@@ -137,14 +137,14 @@ client_4 = Client.create!(
   first_name: 'Aimé',
   last_name: 'Jacquet',
   address: '10 rue de rome 75008 Paris',
-  email: 'aime@mail.com',
+  email: 'aime.jacquet@mail.com',
   phone_number: '0345534509')
 
 client_5 = Client.create!(
   first_name: 'Choupo',
   last_name: 'Moting',
   address: '10 boulevard voltaire 75011 Paris',
-  email: 'lama@mail.com',
+  email: 'choupo.moting@mail.com',
   phone_number: '0345534509')
 
 puts "create bookings ..."
