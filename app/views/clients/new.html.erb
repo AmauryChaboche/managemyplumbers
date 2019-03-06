@@ -6,11 +6,11 @@
           <%= simple_form_for :new_client, url: clients_path do |f| %>
             <div class="form-group string required new_client_first_name">
               <%= select_tag "new_client[email]", options_for_select(Client.all.order(:email).map { |client| [client.email, { "data-client" => client.to_json }] }),
-                prompt: "Email", class: 'form-control select2-autocomplete'%>
+                prompt: 'Email', class: 'form-control select2-autocomplete'%>
             </div>
 
             <div class="form-row">
-              <div class="col" class="form-control">
+              <div class="col" class="form-control my-form">
                 <%= f.input :first_name, placeholder: 'First Name', label: false %>
               </div>
               <div class="col" class="form-control">
@@ -44,8 +44,8 @@
           <% end %>
       </div>
     </div>
-      <div class="col-md-6">
-        <div class="client-card empty" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1469389335181-2198b4caa734?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80');" >
+      <div class="col-md-6" style="position: sticky; top: 20px;">
+        <div class="client-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1469389335181-2198b4caa734?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80');" >
         </div>
       </div>
   </div>

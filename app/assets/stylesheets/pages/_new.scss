@@ -1,19 +1,16 @@
-#address-search {
-  background-color: white;
-  list-style: none;
-  padding: 0;
-   li {
-    padding: 12px 8px;
-    border-bottom: 1px solid grey;
-    cursor: pointer;
-   }
-}
-
 .client_address {
   margin-bottom: 0;
 }
 
-.empty {
+.client-card-image {
+  position: sticky;
+  top: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: align-items;
+  grid-template-columns: 1fr 1fr;
+  width: 500px;
+  height: 400px;
   background-size: contain;
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -24,12 +21,8 @@
  padding: 10px 3px;
 }
 
-#select2-new_client_email-container {
-  color: #A9A9A9 !important;
-}
-
 #new_client_intervention_id {
-  color: #A9A9A9 !important;
+  color: #444 !important;
 }
 
 #new_client_urgency {
@@ -41,3 +34,10 @@
   font-weight: 500 !important;
   color: red !important;
 }
+
+.new_client input {
+  box-shadow: none !important;
+  color: #444;
+}
+
+
