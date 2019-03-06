@@ -27,19 +27,29 @@
   color: white;
   padding-top: 80px;
   h1 {
-  font-size: 65px;
-  font-weight: 1000;
+    font-size: 45px;
+    font-weight: 750;
+  }
+  h3 {
+    font-size: 25px;
+    font-weight: lighter;
+    line-height: 1.6;
   }
 }
 
 #CTA-homepage {
   align-items: center;
-  margin-top: 30px;
-  margin-left: 225px;
   font-size: larger;
   font-weight: bolder;
+  font-family: roboto;
+  font-size: 28px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 25px;
+  padding-right: 25px;
+
 }
 
 .button-homepage {
-  margin-top: 37px;
+  margin-top: 45px;
 }
