@@ -1,13 +1,25 @@
+.client-info {
+  border-radius: 6px;
+  background-color:#ececec;
+  min-height:400px;
+  max-width: 527px;
+  margin-right:30px;
+  padding-top: 5px;
+  padding-left: 25px;
+  margin-left: 30px;
+  margin-top:10px;
+}
 .matchresults {
   background-color: #ececec;
-  margin-bottom: 20px;
-  // margin-left: 518px;
-  max-width: 600px;
+  margin-bottom: 10px;
+  margin-top:10px;
+  max-width: 527px;
   position: relative;
-  min-height:180px;
+  min-height:190px;
   border-radius: 6px;
   opacity:0.9;
   transition: 0.7s ease;
+  margin-right:30px;
 }
 
 .matchresults:hover{
@@ -15,13 +27,26 @@
 }
 
 .matchresults h2 {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bolder;
+}
+.matchresults p {
+  font-size: 16px;
+  font-weight: lighter;
+}
+.client-info h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+.client-info p {
+  font-size: 16px;
+  font-weight: lighter;
+  color: #716f6f
 }
 
 .top-right-element {
   position: absolute;
-  top:60px;
+  top:30px;
   right:30px;
 }
 .top-right-element p {
@@ -37,24 +62,17 @@
 // #1B998B
 // #0FFF95
 
-.client-info {
-  border-radius: 6px;
-  background-color:#ececec;
-  min-height:400px;
-  max-width: 420px;
-  margin-right:80px;
-  margin-top:40px;
-  padding-top: 5px;
-  padding-left: 25px;
-  margin-left: 30px;
-}
-
-.client-info h3 {
-  font-weight: bolder;
-}
 
 .matchbutton {
   font-color: darkgrey;
 }
 
+.matchbutton a {
+  position: absolute;
+  bottom:20px;
+  right:160px;
+}
 
+.hel {
+  display:flex;
+}

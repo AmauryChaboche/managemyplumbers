@@ -12,21 +12,33 @@ class ClientsController < ApplicationController
     if params["match"].present?
       if booking_params[:urgency]
         @booking3 = Booking.create(booking_params.merge(client_id: client.id))
-        BookingSchedulerService.new(@booking3).call3
-        @booking3.save!
-        redirect_to client_path(@booking3.client_id)
+        if @booking3.save
+          BookingSchedulerService.new(@booking3).call3
+          @booking3.save
+          redirect_to client_path(@booking3.client_id)
+        else
+          render :new
+        end
       else
         @booking = Booking.create(booking_params.merge(client_id: client.id))
         @booking2 = Booking.create(booking_params.merge(client_id: client.id))
-        BookingSchedulerService.new(@booking).call
-        BookingSchedulerService.new(@booking2).call2
-        @booking.save!
-        @booking2.save!
-        redirect_to client_path(@booking.client_id)
+        if @booking.save
+          BookingSchedulerService.new(@booking).call
+          BookingSchedulerService.new(@booking2).call2
+          @booking.save!
+          @booking2.save!
+          redirect_to client_path(@booking.client_id)
+        else
+          render :new
+        end
       end
     else
       @booking = Booking.create(booking_params.merge(client_id: client.id))
-      redirect_to edit_booking_path(@booking)
+      if @booking.save
+        redirect_to edit_booking_path(@booking)
+      else
+        render :new
+      end
     end
   end
 

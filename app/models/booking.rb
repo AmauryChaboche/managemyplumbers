@@ -2,9 +2,9 @@ class Booking < ApplicationRecord
   belongs_to :intervention
   belongs_to :client
   belongs_to :user, optional: true
-
+  validates :intervention, presence: true
   def title
-    "#{intervention.category} \n #{client.last_name}"
+    "#{intervention.category} \n #{client.first_name} #{client.last_name}"
   end
 
   def start

@@ -1,51 +1,57 @@
 <%= render layout: "layouts/main_layout", locals: {main_title: "Dashboard", main_date: ""} do %>
   <div class="container">
-    <div class="row">
-      <div class="col-xs-6 col-xs-offset-3">
-        <canvas id="myChart" width="800" height="800" data-total="<%=@total%>" data-names="<%=@names%>" data-turnover="<%=@turnover%>"></canvas>
+
+    <div class="row dashboard-row">
+
+      <div class="col-xs-7 col-sm-7 col-xs-offset-0 col-sm-offset-0 ">
+        <% @employees.each do |employee| %>
+          <div class="message message-border">
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img class="avatar-large" src="<%= employee.avatar %>">
+                </div>
+                <div class="flip-box-back">
+                  <!-- <h2>Paris</h2>
+                  <p>What an amazing city</p> -->
+                </div>
+               </div>
+            </div>
+            <div class="message-iddentity">
+              <div class="message-name">
+                <h3><%= employee.first_name %> <%= employee.last_name %></h3>
+              </div>
+              <div class="message-elements">
+                <p>
+                  <a href="#" target="_blank"><i class="fas fa-phone telephone dashicon"></i></a> &nbsp; &nbsp;
+                  <a href="#" target="_blank"><i class="fas fa-at mail dashicon"></i> </a> &nbsp; &nbsp;
+                  <a href="#" target="_blank"><i class="fas fa-comment sms dashicon"></i></a> &nbsp;
+                </p>
+              </div>
+            </div>
+            <div class="message-ranking">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <div class="message-body">
+              <p># of interventions</p>
+              <p><strong><%= employee.bookings.size %> done last week</strong></p>
+            </div>
+            <div class="message-status">
+              <p class="status accepted">Turnover</p>
+              <p class="price"><strong><%= employee.turnover %> €</strong></p>
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
-    <div class="col-xs-10 col-sm-10 col-xs-offset-1 col-sm-offset-1 ">
-      <% @employees.each do |employee| %>
-        <div class="message message-border">
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img class="avatar-large" src="<%= employee.avatar %>">
-              </div>
-              <div class="flip-box-back">
-                <!-- <h2>Paris</h2>
-                <p>What an amazing city</p> -->
-              </div>
-             </div>
-          </div>
-          <div class="message-name">
-            <h3><%= employee.first_name %> <%= employee.last_name %></h3>
-          </div>
-          <div class="message-elements">
-            <p>
-              <a href="#" target="_blank"><i class="fas fa-phone telephone dashicon"></i></a> &nbsp; &nbsp;
-              <a href="#" target="_blank"><i class="fas fa-at mail dashicon"></i> </a> &nbsp; &nbsp;
-              <a href="#" target="_blank"><i class="fas fa-comment sms dashicon"></i></a> &nbsp;
-            </p>
-          </div>
-          <div class="message-ranking">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </div>
-          <div class="message-body">
-            <p># of interventions</p>
-            <p><strong><%= employee.bookings.size %> done last week</strong></p>
-          </div>
-          <div class="message-status">
-            <p class="status accepted">Turnover</p>
-            <p class="price"><strong><%= employee.turnover %> €</strong></p>
-          </div>
-        </div>
-      <% end %>
+
+      <div class="wheel-box message-border col-xs-4 col-xs-offset-7">
+        <canvas id="myChart" width="800" height="800" data-total="<%=@total%>" data-names="<%=@names%>" data-turnover="<%=@turnover%>" ></canvas>
+      </div>
+
     </div>
   </div>
 <% end %>
