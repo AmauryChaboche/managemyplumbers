@@ -31,9 +31,33 @@
   }
 }
 
+
+.call-to-action.matchbtn {
+    display: flex;
+justify-content: align-items;
+grid-template-columns: 1fr 1fr;
+}
+
+.call-to-action.matchbtn:hover {
+    color: white !important;
+}
+
+.call-to-action.reversebtn {
+  background-color: white;
+  display: flex;
+justify-content: align-items;
+grid-template-columns: 1fr 1fr;
+}
+
+
+// a:hover {
+//   color: #1B998B;
+// }
+
 a:hover {
   color: #1B998B;
 }
+
 
 .btn-success {
   background-color: #0FFF95 !important;
@@ -63,4 +87,8 @@ a:hover {
 
 .form-group {
   border-radius: 10px;
+}
+
+.interventionselect {
+  color: grey;
 }
