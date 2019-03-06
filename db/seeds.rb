@@ -112,40 +112,47 @@ user_5 = User.create!(
 puts "create clients ..."
 
 client_1 = Client.create!(
-  first_name: 'Gerard',
-  last_name: 'Dupond',
+  first_name: 'Princess',
+  last_name: 'Peach',
   address: '15 Rue De Rivoli, 75004 Paris, France',
-  email: 'g.dupond@mail.com',
+  email: 'princess@peach.com',
   phone_number: '0175404142')
 
 client_2 = Client.create!(
-  first_name: 'Astrid Delcros',
-  last_name: 'Dupond',
+  first_name: 'Toad',
+  last_name: 'Deluxe',
   address: '25 boulevard de magenta, Paris',
-  email: 'astro.delcros@mail.com',
+  email: 'toad.d@mail.com',
   phone_number: '0675404142')
 
 client_3 = Client.create!(
-  first_name: 'Bernard',
-  last_name: 'Lama',
+  first_name: 'Donkey',
+  last_name: 'Kong',
   address: 'parc des princes paris',
-  email: 'barnard.lama@mail.com',
+  email: 'donkey.kong@mail.com',
   phone_number: '0345534509')
 
 
 client_4 = Client.create!(
-  first_name: 'Aimé',
-  last_name: 'Jacquet',
+  first_name: 'Didi',
+  last_name: 'Kong',
   address: '10 rue de rome 75008 Paris',
-  email: 'aime.jacquet@mail.com',
+  email: 'didi.kong@mail.com',
   phone_number: '0345534509')
 
 client_5 = Client.create!(
-  first_name: 'Choupo',
-  last_name: 'Moting',
+  first_name: 'Yoshi',
+  last_name: 'Yoshi',
   address: '10 boulevard voltaire 75011 Paris',
-  email: 'choupo.moting@mail.com',
+  email: 'yoshi@mail.com',
   phone_number: '0345534509')
+
+client_6 = Client.create!(
+  first_name: 'Boo',
+  last_name: 'Boo',
+  address: '40 avenue trudaine 75009 Paris',
+  email: 'boo@boo.com',
+  phone_number: '0246343409')
 
 puts "create bookings ..."
 
@@ -156,6 +163,7 @@ booking_1 = Booking.create!(
   client: client_1,
   user: user_1,
   planified: true,
+  travel_time: 660
 )
 
 booking_2 = Booking.create!(
@@ -165,6 +173,7 @@ booking_2 = Booking.create!(
   client: client_2,
   user: user_2,
   planified: true,
+  travel_time: 900
 )
 
 booking_3 = Booking.create!(
@@ -174,6 +183,7 @@ booking_3 = Booking.create!(
   client: client_3,
   user: user_3,
   planified: true,
+  travel_time: 600
 )
 
 booking_4 = Booking.create!(
@@ -183,6 +193,7 @@ booking_4 = Booking.create!(
   client: client_4,
   user: user_4,
   planified: true,
+  travel_time: 1200
 )
 
 
@@ -192,7 +203,8 @@ booking_5 = Booking.create!(
   intervention: intervention_1,
   client: client_5,
   planified: true,
-  user: user_5
+  user: user_5,
+  travel_time: 1500
 )
 
 booking_6 = Booking.create!(
@@ -201,7 +213,8 @@ booking_6 = Booking.create!(
   intervention: intervention_5,
   client: client_1,
   planified: true,
-  user: user_5
+  user: user_5,
+  travel_time: 480
 )
 
 # booking_7 = Booking.create!(

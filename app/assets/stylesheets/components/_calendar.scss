@@ -16,6 +16,11 @@ body {
 
 }
 
+.fc-body .fc-resource-area .fc-cell-content {
+  font-family: "Roboto";
+  font-weight: bolder;
+}
+
 .fc-timeline-event {
   // background-color:red !important;
   // border: none !important;
@@ -52,8 +57,8 @@ body {
 }
 
 .fc-content {
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
 }
 
 
