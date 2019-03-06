@@ -1,6 +1,5 @@
 <%= render layout: "layouts/main_layout", locals: {main_title: "Choose a slot", main_date: ""} do %>
-  <div class="container">
-    <div class="row">
+    <div class="row hel">
       <div class="col-xs-6 client-info">
         <strong><em><h3>Client information</h3></em></strong>
         <p><i class="fas fa-address-card"></i> <%= @client.first_name %>  <%= @client.last_name %></p>
@@ -13,49 +12,43 @@
 
       </div>
       <div class="col-xs-6">
-        <br>
-        <br>
         <% count = 0  %>
         <% if @bookings.size == 2 %>
           <% @bookings.each do |booking| %>
           <div class="col-xs-12 matchresults">
             <% count += 1 %>
-            <h2><%= booking.start_date.strftime('%A %e %B, %l %M %p')%></h2>
+            <h2><%= booking.start_date.strftime('%A %e %B, %l:%M %p')%></h2>
             <div class="top-right-element">
-            <img class="avatar-very-large photoresult" src="<%= booking.user.avatar %>">
-            <p><%= booking.user.first_name %></p>
+              <img class="avatar-very-large photoresult" src="<%= booking.user.avatar %>">
+              <p><%= booking.user.first_name %></p>
             </div>
             <div class="travel-time">
                <p>Travel time: <strong><%= booking.travel_time / 60 %> minutes</strong></p>
             </div>
-
-            <% if count == 1  %>
             <div class="matchbutton">
               <%= link_to "Book this slot", booking_path(booking.id) , method: :patch , class:'call-to-action' %>
             </div>
-            <% else %>
-            <div class="matchbutton">
-              <%= link_to "Choose 2nd match", booking_path(booking.id) , method: :patch , class:'call-to-action'%>
-            </div>
-            <% end %>
+
           </div>
           <% end %>
         <% else %>
           <% @bookings.each do |booking| %>
-          <div class="col-xs-12 matchresults">
-          <p>Urgent : First available spot</p>
-            <%= booking.start_date %> //
-            <%= booking.end_date %> //
-            <%= booking.intervention.duration %> //
-            <%= booking.intervention.category %> //
-            <%= booking.user.first_name %> //
-            <br>
-            <%= link_to "URGENT", booking_path(booking.id) , method: :patch , class:'btn btn-success'%>
-          </div>
+            <div class="col-xs-12 matchresults">
+              <h2><%= booking.start_date.strftime('%A %e %B, %l:%M %p')%></h2>
+              <div class="top-right-element">
+                <img class="avatar-very-large photoresult" src="<%= booking.user.avatar %>">
+                <p><%= booking.user.first_name %></p>
+              </div>
+              <div class="travel-time">
+                <p>Travel time: <strong><%= booking.travel_time / 60 %> minutes</strong></p>
+              </div>
+              <div class="matchbutton">
+                <%= link_to "Book this slot", booking_path(booking.id) , method: :patch , class:'call-to-action' %>
+              </div>
+            </div>
           <% end %>
           <br>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
 <% end %>
