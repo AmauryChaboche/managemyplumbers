@@ -1,4 +1,19 @@
+.dashboard-row {
+  display: flex;
+  padding: 20px;
+  align-items: flex-start;
+  margin: 20px;
+}
+/* The Wheel */
+.wheel-box {
+  padding: 20px;
+  align-items: center;
+  margin: 20px;
+  top: 0;
+  position: sticky;
+}
 
+/* The Box */
 .message {
   display: flex;
   align-items: center;
@@ -19,22 +34,24 @@
 .message:last-child {
   border-bottom: none;
 }
-.message-body {
-  padding-left:80px;
-  flex-grow: 1;
+
+/* ################ Iddentity block ################*/
+.message-iddentity{
+  display: block;
+  // align-items: center;
+  text-align: center;
+  padding-right: 10px;
+
 }
-.message-elements {
-  min-width:200px;
-  padding-right: 80px;
-  padding-top: 20px;
-}
+
+/* #### Name #### */
 .message-name {
-  padding-left: 50px;
+  // padding-left: 50px;
   min-width: 160px;
 }
 .message-name h3 {
   font-size: 13px;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   margin-bottom: 0px;
 }
 .message-name p {
@@ -43,12 +60,12 @@
   opacity: 0.6;
   margin-top: 5px;
 }
-.message-ranking{
-  // padding-left: 20px;
-  padding-right:20px;
-}
-.checked {
-  color: orange;
+
+/* #### Communication elements #### */
+.message-elements {
+  width: auto;
+  // padding-right: 80px;
+  padding-top: 20px;
 }
 // .message-elements p {
 //   font-size: 13px;
@@ -56,12 +73,41 @@
 //   opacity: 0.6;
 //   margin-top: 5px;
 // }
+.dashicon {
+  color:rgb(27, 153, 139);
+  opacity:0.7;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+.dashicon:hover {
+  color:rgb(27, 153, 139);
+  font-size:1.05em;
+  opacity:1;
+  text-decoration: none;
+}
+
+/* ################ Ranking block ################*/
+.message-ranking{
+  padding-left: 10px;
+  padding-right:10px;
+  font-size: 0.8em;
+}
+.checked {
+  color: orange;
+}
+
+/* ################ Message Body block ################*/
 .message-body {
-  padding-left: 30px;
+  padding-left: 10px;
   font-size: 13px;
   color: rgba(0,0,0,0.7);
   text-align: center;
+  flex-grow: 1;
 }
+// .message-body {
+//   padding-left:80px;
+//   flex-grow: 1;
+// }
 // .message-body {
 //   padding-left: 20px;
 //   color: rgba(0,0,0,0.4);
@@ -73,11 +119,15 @@
 .message-body p {
   margin: 6px 0;
 }
+
+/* ################ Message Status block ################*/
 .message-status {
   font-size: 14px;
   font-weight: bold;
   text-align: center;
   padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .status.accepted {
   color: red;
@@ -89,6 +139,11 @@
 .status.pending {
   color: lightgrey;
 }
+
+
+/* ################ CLIENT NEW ################*/
+
+/* Astrid Client-Card Front end client new */
 
 .form-row {
   display: flex;
@@ -102,16 +157,4 @@ grid-template-columns: 1fr 1fr;
 width: 500px;
 height: 400px;
 padding: 20px;
-}
-.dashicon {
-  color:rgb(27, 153, 139);
-  opacity:0.7;
-  transition: 0.5s ease;
-  text-decoration: none;
-}
-.dashicon:hover {
-  color:rgb(27, 153, 139);
-  font-size:1.05em;
-  opacity:1;
-  text-decoration: none;
 }
