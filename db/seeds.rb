@@ -62,7 +62,7 @@ user_1 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,19),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Mario_avatar.svg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551863519/samples/people/Mario_avatar_sin_border.svg'
 )
 
 user_2 = User.create!(
@@ -73,7 +73,7 @@ user_2 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,16),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Luigi_avatar.svg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551863518/samples/people/Luigi_avatar_sin_border.svg'
 )
 
 user_3 = User.create!(
@@ -84,7 +84,7 @@ user_3 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Wario_avatar.svg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551863516/samples/people/Wario_avatar_sin_border.svg'
 )
 
 user_4 = User.create!(
@@ -95,7 +95,7 @@ user_4 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,20),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Warluigi_avatar.svg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551863518/samples/people/Warluigi_avatar_sin_border.svg'
 )
 
 user_5 = User.create!(
@@ -106,7 +106,7 @@ user_5 = User.create!(
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551787201/samples/people/Minion_avatar.svg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551863517/samples/people/Minion_avatar_sin_border.svg'
 )
 
 puts "create clients ..."
