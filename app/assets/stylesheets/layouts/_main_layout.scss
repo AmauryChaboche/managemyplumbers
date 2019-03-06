@@ -6,15 +6,15 @@
   flex-grow: 1;
   align-content: center;
   font-family: nunito;
+  padding-top: 50px;
 }
 
 .main-page-title {
-  padding-top: 90px;
   margin-top: 0px;
   position: relative;
   z-index: 3;
   color: white;
-  font-weight: 900;
+  font-weight: 700;
   flex-grow: 1;
 }
 
@@ -27,12 +27,11 @@
 }
 
 .main-page-buttons {
-  padding-top: 90px;
   margin-top: 0px;
   position: relative;
   z-index: 3;
   color: white;
-  font-weight: 900;
+  font-weight: 700;
   display: flex;
   align-items: center;
 }

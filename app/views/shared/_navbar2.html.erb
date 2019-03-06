@@ -1,13 +1,13 @@
 <div class="navbar container">
-  <div class="navbar-left hidden-xs hidden-sm">
-    <%= link_to bookings_path, class: "navbar-wagon-brand" do %>
+  <div class="navbar-left">
+    <%= link_to bookings_path, class: "navbar-logo" do %>
       <%= image_tag('plumber.svg', height: 50, class: "truck_to_go") %>
     <% end %>
   </div>
-  <div class="navbar-right hidden-xs hidden-sm">
+  <div class="navbar-right">
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "Add an intervention", new_client_path, class: "call-to-action" %>
+      <%= link_to "Add an intervention", new_client_path, class: "call-to-action"%>
       <%= link_to "Dashboard", bookings_dashboard_path, class: "specific_link" %>
       <%= image_tag current_user.avatar, class: "avatar" %>
     <% end %>

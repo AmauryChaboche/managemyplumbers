@@ -25,11 +25,12 @@
   border-radius: 10px;
   border-color: #0FFF95;
   font-family: nunito;
-  :focus {
+  &:focus {
     text-decoration: none !important;
     outline: none !important;
   }
 }
+
 
 .call-to-action.matchbtn {
     display: flex;
@@ -52,6 +53,11 @@ grid-template-columns: 1fr 1fr;
 // a:hover {
 //   color: #1B998B;
 // }
+
+a:hover {
+  color: #1B998B;
+}
+
 
 .btn-success {
   background-color: #0FFF95 !important;
