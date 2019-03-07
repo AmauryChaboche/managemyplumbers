@@ -26,7 +26,7 @@
                 <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' }, label: false, class:'nterventionelect', prompt: 'Select an Intervention' %>
               </div>
               <div class="col" class="form-control">
-                <%= f.input :urgency, inline_label: 'Emergency', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'booking[urgency]' } %>
+                <%= f.input :urgency, inline_label: 'Urgency', as: :boolean, checked_value: true, unchecked_value: false, input_html: { name: 'booking[urgency]' } %>
               </div>
             </div>
             <div class="form-row">

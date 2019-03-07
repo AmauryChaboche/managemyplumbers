@@ -104,7 +104,14 @@ if (dashboard) {
             intersect: false,
             titleFontFamily: "Nunito",
             footerFontSize: 24,
-            bodyFontSize: 24
+            bodyFontSize: 24,
+            callbacks: {
+                    label: function(tooltipItem, data) {
+                      const plumber = data.labels[tooltipItem.index];
+                      const turnover = data.datasets[0]['data'][tooltipItem.index];
+                      return `${plumber}: ${turnover} €`;
+                    }
+                }
           },
           showAllTooltips: true,
           animation: {
@@ -156,8 +163,8 @@ function drawTotals(chart) {
     ctx.fontFamily;
 
     var text = chart.config.centerText.text,
-    textX = Math.round((width - ctx.measureText(text).width) / 2),
-    textY = (height / 2) + 20;
+    textX = Math.round((width - ctx.measureText(text).width) / 2) + 7,
+    textY = (height / 2) + 25;
 
     ctx.fillText(text, textX, textY);
     ctx.save();

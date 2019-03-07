@@ -9,8 +9,13 @@
         <strong><em><h3>Booking information</h3></em></strong>
         <p><i class="fas fa-wrench"></i> <%= @bookings[0].intervention.category%></p>
         <p><i class="fas fa-hourglass-start"></i>  <%= @bookings[0].intervention.duration%> minutes</p>
-        <p><i class="fas fa-money-bill-alt"></i></i>  <%= @bookings[0].intervention.price%> €</p>
+        <% if @bookings[0].urgency %>
+          <p><i class="fas fa-money-bill-alt"></i></i> <%=" #{@bookings[0].price}€ ( #{@bookings[0].intervention.price}€" %> <span style="color:red"> + 50€ </span> )
 
+        <% else %>
+          <p><i class="fas fa-money-bill-alt"></i></i>  <%= @bookings[0].intervention.price%> €
+        <% end  %>
+        </p>
       </div>
       <div class="col-xs-6">
         <% count = 0  %>
