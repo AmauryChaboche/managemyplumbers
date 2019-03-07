@@ -33,13 +33,13 @@
 
 
 .call-to-action.matchbtn {
-    display: flex;
-justify-content: align-items;
-grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: align-items;
+  grid-template-columns: 1fr 1fr;
 }
 
 .call-to-action:hover {
-    color: white !important;
+  color: white !important;
 }
 
 .call-to-action.reversebtn {
@@ -51,7 +51,7 @@ grid-template-columns: 1fr 1fr;
 }
 
 .call-to-action.reversebtn:hover {
-    color: #0FFF95 !important;
+  color: #0FFF95 !important;
 }
 
 // a:hover {
@@ -121,12 +121,13 @@ a:hover {
   // }
 }
 .swal-button:not([disabled]):hover {
-    background-color: #0FFF95;
+  background-color: #0FFF95;
+  color: white;
 }
 
 .swal-button--confirm {
   background-color: white;
-  color: #FFFFFF;
+  color: #1B998B;
   border-color: #FFFFFF;
   border: 1px solid #FFFFFF;
   padding: 5px;
@@ -138,12 +139,13 @@ a:hover {
 
 }
 .swal-button--confirm:not([disabled]):hover {
-    background-color: white;
+  background-color: white;
+  color: #0FFF95;
 }
 
 .swal-button--cancel {
   background-color: white;
-  color: #0FFF95;
+  color: #1B998B;
   border-color: #0FFF95;
   border: 1px solid #0FFF95;
   padding: 5px;
@@ -153,14 +155,16 @@ a:hover {
   padding-top: 3px;
 }
 .swal-button--cancel:not([disabled]):hover {
-    background-color: white;
+  background-color: white;
+  color: #0FFF95;
 }
 
 .swal-button--danger {
-    background: #D63230;
+  background: #D63230;
 }
 .swal-button--danger:not([disabled]):hover {
-    background-color: #D63230;
+  background-color: #D63230;
+  color: white;
 }
 
 #second_form {

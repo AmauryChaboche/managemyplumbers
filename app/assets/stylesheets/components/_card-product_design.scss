@@ -51,7 +51,7 @@
   text-align: center;
   justify-content: center;
   color: black;
-  font-family: Arial-black;
+  font-family: Roboto;
   transform: rotateY(180deg);
   height: 60px;
   width: 60px;
@@ -59,4 +59,6 @@
 
 .flip-box-back p {
   margin: 1em;
+  color: black;
+  font-family: Roboto;
 }
