@@ -157,8 +157,14 @@ a:hover {
 }
 
 .swal-button--danger {
-    background: #a00;
+    background: #D63230;
 }
 .swal-button--danger:not([disabled]):hover {
-    background-color: #a00;
+    background-color: #D63230;
+}
+
+#second_form {
+  margin-top: 15px;
+  position: absolute;
+  left: 153px;
 }

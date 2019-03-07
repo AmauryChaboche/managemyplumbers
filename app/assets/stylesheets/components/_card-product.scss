@@ -157,11 +157,11 @@
   padding-right: 10px;
 }
 .status.accepted {
-  color: red;
+  color: #D63230;
   opacity:0.8;
 }
 .status.declined {
-  color: red;
+  color: #D63230;
 }
 .status.pending {
   color: lightgrey;
@@ -196,4 +196,15 @@ padding: 20px;
   background-size: contain;
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+}
+
+.booking-card-image-edit {
+  width: 500px;
+  height: 350px;
+  margin: 20px 0;
+  background-size: contain;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-image: image-url('peach-and-mario.jpg'), linear-gradient(rgba(0,0,0,-300), rgba(0,0,0,-300));
+  background-repeat: none;
 }

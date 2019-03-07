@@ -189,20 +189,10 @@ puts "create bookings ..."
 
 # Mario bookings
 
-booking_1 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
-  intervention: intervention_1,
-  client: client_1,
-  user: user_1,
-  planified: true,
-  travel_time: 660,
-  price: intervention_1.price.to_i
-)
 
 booking_10 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,10),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,13,00),
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
   intervention: intervention_3,
   client: client_6,
   user: user_1,
@@ -246,6 +236,7 @@ booking_3 = Booking.create!(
   travel_time: 600,
   price: intervention_1.price.to_i
 )
+
 # Waluigi bookings
 
 booking_6 = Booking.create!(
@@ -259,6 +250,16 @@ booking_6 = Booking.create!(
   price: intervention_5.price.to_i
 )
 
+booking_1 = Booking.create!(
+  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
+  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,12,00),
+  intervention: intervention_1,
+  client: client_1,
+  user: user_3,
+  planified: true,
+  travel_time: 660,
+  price: intervention_1.price.to_i
+)
 # Minion Minion bookings
 
 booking_5 = Booking.create!(
@@ -282,6 +283,5 @@ booking_4 = Booking.create!(
   travel_time: 1200,
   price: intervention_4.price.to_i
 )
-
 
 
