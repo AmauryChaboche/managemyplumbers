@@ -166,7 +166,7 @@ if (calendar) {
       const deleteBooking = calEvent.id;
 
       swal({
-        title: "Booking Information?",
+        title: "Booking Information",
         text: message,
         buttons: {
           cancel:"OK",
