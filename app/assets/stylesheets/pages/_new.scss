@@ -26,13 +26,28 @@
 }
 
 #new_client_urgency {
-  size: 30px;
-  margin: 20px 4px 30px;
+  // size: 30px;
+  // margin: 20px 4px 30px;
+  display: none;
+}
+
+#new_client_urgency + label {
+  background-image: image-url("square-regular.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 35px;
+
+}
+
+#new_client_urgency:checked + label {
+  background-image: image-url("check-square-regular.svg");
+
 }
 
 .form-check-label {
   font-weight: 500 !important;
-  color: red !important;
+  color: white;
+  margin: 0 auto;
 }
 
 .new_client input {
@@ -43,3 +58,12 @@
 // .new_client_urgency input {
 //   -webkit-appearance: none;
 // }
+
+.form-check {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  background-color: red;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
