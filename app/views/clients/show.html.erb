@@ -1,4 +1,4 @@
-<%= render layout: "layouts/main_layout", locals: {main_title: "Choose a slot", main_date: ""} do %>
+<%= render layout: "layouts/main_layout", locals: {main_title: "Booking propositions", main_date: ""} do %>
     <div class="row hel">
       <div class="col-xs-6 client-info">
         <strong><em><h3>Client information</h3></em></strong>
@@ -32,7 +32,7 @@
                <p>Travel time: <strong><%= booking.travel_time / 60 %> minutes</strong></p>
             </div>
             <div class="matchbutton">
-              <%= link_to "Book this slot", booking_path(booking.id) , method: :patch , class:'call-to-action' %>
+              <%= link_to "Book", booking_path(booking.id) , method: :patch , class:'call-to-action' %>
             </div>
           </div>
           <% end %>
@@ -49,7 +49,7 @@
                 <p id="emergency"><strong>Emergency</strong></p>
               </div>
               <div class="matchbutton">
-                <%= link_to "Book this slot", booking_path(booking.id) , method: :patch , class:'call-to-action' %>
+                <%= link_to "Book", booking_path(booking.id) , method: :patch , class:'call-to-action' %>
               </div>
             </div>
           <% end %>
