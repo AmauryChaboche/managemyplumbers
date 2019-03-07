@@ -1,8 +1,9 @@
 <%= render layout: "layouts/main_layout", locals: {main_title: "Create your booking", main_date: ""} do %>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-      </div>
+      <div class="col-md-6" style="position: sticky;">
+        <div class="booking-card-image-edit"></div>
+        </div>
       <div class="col-md-6">
         <div class="form-wrapper" style="width: 90%; margin: 0 auto; min-height: 500px; position: relative;">
           <%= simple_form_for(@booking) do |f| %>
