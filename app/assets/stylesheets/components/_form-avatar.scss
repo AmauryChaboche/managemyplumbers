@@ -1,18 +1,24 @@
 // Checkboxes design
 .plumber-choices {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 20px 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .plumber-choice {
   background: #b7b7b7;
+  margin: 1px;
   padding: 20px;
   border-radius: 5px;
   opacity: .4;
   flex: 0 0 30%;
   text-align: center;
+  max-width: 86px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &:hover {
     opacity: 1;
     cursor: pointer;
