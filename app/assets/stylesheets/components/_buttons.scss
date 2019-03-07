@@ -1,18 +1,18 @@
-.fc-button {
-  color: white !important;
-  // padding: 10px 15px !important;
-  border-radius: 4px !important;
-  // font-weight: bold !important;
-  background-color: rgb(27, 153, 139) !important;
-  transition: background 0.3s ease !important;
-  opacity:0.7;
-}
-.fc-button:hover {
-  opacity: 1 !important;;
-  background: rgb(27, 153, 139) !important;;
-  text-decoration: none !important;;
-  color: white !important;;
-}
+// .fc-button {
+//   color: white !important;
+//   // padding: 10px 15px !important;
+//   border-radius: 4px !important;
+//   // font-weight: bold !important;
+//   background-color: rgb(27, 153, 139) !important;
+//   transition: background 0.3s ease !important;
+//   opacity:0.7;
+// }
+// .fc-button:hover {
+//   opacity: 1 !important;;
+//   background: rgb(27, 153, 139) !important;;
+//   text-decoration: none !important;;
+//   color: white !important;;
+// }
 
 /* Build your own button classes ! */
 
@@ -38,17 +38,21 @@ justify-content: align-items;
 grid-template-columns: 1fr 1fr;
 }
 
-.call-to-action.matchbtn:hover {
+.call-to-action:hover {
     color: white !important;
 }
 
 .call-to-action.reversebtn {
+  color: #1B998B;
   background-color: white;
   display: flex;
-justify-content: align-items;
-grid-template-columns: 1fr 1fr;
+  justify-content: align-items;
+  grid-template-columns: 1fr 1fr;
 }
 
+.call-to-action.reversebtn:hover {
+    color: #0FFF95 !important;
+}
 
 // a:hover {
 //   color: #1B998B;
