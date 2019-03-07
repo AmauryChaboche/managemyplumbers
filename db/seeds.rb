@@ -99,14 +99,14 @@ user_4 = User.create!(
 )
 
 user_5 = User.create!(
-  first_name: 'Minion',
-  last_name: 'Minion',
-  email: 'minion@myplumbers.com',
+  first_name: 'Toad',
+  last_name: 'Bros',
+  email: 'toad@myplumbers.com',
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551863517/samples/people/Minion_avatar_sin_border.svg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551977061/samples/people/Toad_avatar.svg'
 )
 
 puts "create clients ..."
