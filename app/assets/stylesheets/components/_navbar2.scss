@@ -2,7 +2,6 @@
   width: 100%;
   position: absolute;
   top: 0px;
-
 }
 .navbar {
   display: flex;
@@ -10,7 +9,11 @@
   z-index: 2;
   padding-left: 0px !important;
   padding-top: 20px;
-  a {
+}
+
+
+  .navbar-right {
+    a {
     margin-left: 30px;
   }
   img {
@@ -53,6 +56,15 @@
 }
 
 .specific_link:hover {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: nunito;
+  font-size: 1.1em;
+  // transform: scale(1.08);
+}
+
+.specific_link:visited {
   color: white;
   text-decoration: none;
   font-weight: bold;

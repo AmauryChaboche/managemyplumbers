@@ -1,19 +1,21 @@
-<svg class= "svg-background", viewBox="0 0 1440 387" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 0H1440V286.899C1440 286.899 997.269 361.387 713 379.234C434.67 396.708 0 379.234 0 379.234V0Z" fill="#1B998B"/>
+<svg class= "svg-background", viewBox="0 0 1440 313" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H1440V232.039C1440 232.039 997.269 292.285 713 306.719C434.67 320.851 0 306.719 0 306.719V0Z" fill="#1B998B"/>
 </svg>
 
 <div class="container main-titles-container">
   <h1 class="main-page-title"><%= main_title %></h1>
-  <% if main_date.present? %>
+  <%if main_date.present? %>
     <div class="main-page-buttons">
       <div class="button-left"><i class="fas fa-chevron-left"></i></div>
-          <%= main_date %>
+      <div class="date-mainlayout"></div>
       <div class="button-right"><i class="fas fa-chevron-right"></i></div>
     </div>
+    <% else %>
+    <div class="main-page-buttons"></div>
   <% end %>
 </div>
 
 <div class="container main-container">
   <%= yield %>
 </div>
-<%= render 'shared/footer' %>
+<%#= render 'shared/footer' %>

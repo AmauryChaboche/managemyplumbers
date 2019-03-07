@@ -47,15 +47,18 @@ class BookingsController < ApplicationController
       employee.first_name
       employee.last_name
       employee.bookings.each do |book|
-        turnover += book.intervention.price
+        turnover += book.price
       end
       employee[:turnover] = turnover
     end
+    @employees = @employees.sort_by { |h| -h[:turnover] }
+    @total = 0
     @name_data = []
     @turnover_data = []
     @employees.each do |l|
       @name_data << l.first_name
       @turnover_data << l.turnover
+      @total += l.turnover
     end
     @names = @name_data.join('-')
     @turnover = @turnover_data.join('-')

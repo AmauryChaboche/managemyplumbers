@@ -17,14 +17,26 @@ if (calendar) {
 
     const buttonRight = document.querySelector('.button-right');
     const buttonLeft = document.querySelector('.button-left');
+    const date = document.querySelector('.date-mainlayout');
+    const findDate = () => {
+      let moment = $('#calendar').fullCalendar('getDate');
+      date.innerText = moment.format('dddd, MMMM D');
+    };
 
     buttonRight.addEventListener('click', event => {
       $('#calendar').fullCalendar('getCalendar').next();
+      findDate();
     });
 
     buttonLeft.addEventListener('click', event => {
       $('#calendar').fullCalendar('getCalendar').prev();
+      findDate();
     });
+
+
+  //   $('#my-button').click(function() {
+  // alert("The current date of the calendar is " + moment.format());
+  // });
 
   const eventFire = (el, etype) => {
     if (el.fireEvent) {
@@ -61,11 +73,11 @@ if (calendar) {
     const updateEvent = (event) => {
         // console.log(event);
         const start_date = event.start._i;
-        console.log(event);
+        // console.log(event);
         const end_date = event.end._i;
         const book_id = event.id
         const plomb_id = event.resourceId;
-        console.log(plomb_id);
+        // console.log(plomb_id);
         $.ajax({
             headers: {
           'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
@@ -88,7 +100,7 @@ if (calendar) {
   const displayImage = () => {
     const hello = document.querySelectorAll(".fc-scroller");
     const gg = [].slice.call(hello)
-    console.log(hello)
+    // console.log(hello)
     // console.log(hello);
     const gg2 = gg[2];
     // console.log(gg[2]);
@@ -142,8 +154,8 @@ if (calendar) {
     eventClick: function(calEvent, jsEvent, view) {
     const number = calEvent.travel_time / 60
     const trav = Math.round( number * 10 ) / 10;
-      const book_id = calEvent.id
-      console.log(calEvent)
+      const book_id = calEvent.id;
+      // console.log(calEvent)
       const message = ' Client: ' + calEvent.client.first_name + ' ' + calEvent.client.last_name  +
         '\n Category: ' + calEvent.intervention.category +
         '\n Price: ' + calEvent.intervention.price + ' €' +
@@ -210,6 +222,9 @@ if (calendar) {
       });
     }
   })
+
+
+    findDate();
 
 }
 

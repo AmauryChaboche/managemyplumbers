@@ -1,3 +1,20 @@
 #address-search {
-  background-color: lightblue !important;
+  background-color: white !important;
+  border-bottom: solid 0.5px #b3afaf;
+  border-right:solid 0.5px #b3afaf;
+  border-left:solid 0.5px #b3afaf;
+  list-style: none;
+  padding: 0;
+   li {
+    padding: 12px 8px;
+    border-bottom: 1px solid #b3afaf;
+    cursor: pointer;
+   }
+  li:hover {
+    background-color: #e6e6e6;
+  }
+}
+
+.new_client_address {
+  margin-bottom: 0px;
 }
