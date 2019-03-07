@@ -135,7 +135,6 @@ client_3 = Client.create!(
   phone_number: '0345534509'
 )
 
-
 client_4 = Client.create!(
   first_name: 'Adil',
   last_name: 'Rami',
@@ -145,21 +144,20 @@ client_4 = Client.create!(
 )
 
 client_5 = Client.create!(
-  first_name: 'Sissi',
-  last_name: 'Seulement',
+  first_name: 'Marty',
+  last_name: 'McFly',
   address: '10 boulevard voltaire 75011 Paris',
-  email: 'princesse@sissi.com',
+  email: 'marty@mcfly.com',
   phone_number: '0345534509'
 )
 
 client_6 = Client.create!(
-  first_name: 'Big',
-  last_name: 'Mac',
+  first_name: 'Steve',
+  last_name: 'Urkel',
   address: '164 avenue de choisy 75013',
-  email: 'big@mac.com',
+  email: 'steve@urkel.com',
   phone_number: '0246343409'
 )
-
 
 client_8 = Client.create!(
   first_name: 'Speedy',
@@ -182,6 +180,22 @@ client_7 = Client.create!(
   last_name: 'Tudor',
   address: '70 avenue trudaine 75009 Paris',
   email: 'meunier@tudor.com',
+  phone_number: '0246343409'
+)
+
+client_8 = Client.create!(
+  first_name: 'Mickael',
+  last_name: 'Jordan',
+  address: '70 avenue trudaine 75009 Paris',
+  email: 'mickael@jordan.com',
+  phone_number: '0246343409'
+)
+
+client_9 = Client.create!(
+  first_name: 'Bruce',
+  last_name: 'Lee',
+  address: '70 avenue trudaine 75009 Paris',
+  email: 'bruce@lee.com',
   phone_number: '0246343409'
 )
 
