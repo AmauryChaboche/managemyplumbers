@@ -1,6 +1,11 @@
 <%= render layout: "layouts/main_layout", locals: {main_title: "Create your booking", main_date: ""} do %>
   <div class="container">
-
+<div class="row">
+    <div class="col-md-6" style="position: sticky;">
+        <div class="client-card-image-new" style="background-image: linear-gradient(rgba(0,0,0,-300), rgba(0,0,0,-300)), url('http://www.atariage.com/forums/uploads//monthly_11_2009/blogentry-10940-125789684536.jpg');" >
+        </div>
+  </div>
+  <div class="col-md-6">
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
       <%= simple_form_for(@booking) do |f| %>
 
@@ -31,4 +36,8 @@
     <div class="hidden" id="start_date" data-start="<%= @booking.start_date.to_f * 1000 %>"></div>
     <div class="hidden" id="planified" data-planified="<%= true %>"></div>
   </div>
+
+</div>
+</div>
+
 <% end %>

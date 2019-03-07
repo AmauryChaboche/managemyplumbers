@@ -112,76 +112,76 @@ user_5 = User.create!(
 puts "create clients ..."
 
 client_1 = Client.create!(
-  first_name: 'Princess',
-  last_name: 'Peach',
+  first_name: 'Teddy',
+  last_name: 'Riner',
   address: '15 Rue De Rivoli, 75004 Paris, France',
-  email: 'princess@peach.com',
+  email: 'teddy@riner.com',
   phone_number: '0175404142'
 )
 
 client_2 = Client.create!(
-  first_name: 'Toad',
-  last_name: 'Deluxe',
+  first_name: 'Passe',
+  last_name: 'Partout',
   address: '25 boulevard de magenta, Paris',
-  email: 'toad.d@mail.com',
+  email: 'passe.p@mail.com',
   phone_number: '0675404142'
 )
 
 client_3 = Client.create!(
-  first_name: 'Donkey',
-  last_name: 'Kong',
+  first_name: 'Pamela',
+  last_name: 'Anderson',
   address: '52 Rue des Vignes, 75016 Paris',
-  email: 'donkey.kong@mail.com',
+  email: 'pamela.anderson@mail.com',
   phone_number: '0345534509'
 )
 
 
 client_4 = Client.create!(
-  first_name: 'Didi',
-  last_name: 'Kong',
+  first_name: 'Adil',
+  last_name: 'Rami',
   address: '10 rue de rome 75008 Paris',
-  email: 'didi.kong@mail.com',
+  email: 'adil.rami@mail.com',
   phone_number: '0345534509'
 )
 
 client_5 = Client.create!(
-  first_name: 'Yoshi',
-  last_name: 'Yoshi',
+  first_name: 'Sissi',
+  last_name: 'Seulement',
   address: '10 boulevard voltaire 75011 Paris',
-  email: 'yoshi@mail.com',
+  email: 'princesse@sissi.com',
   phone_number: '0345534509'
 )
 
 client_6 = Client.create!(
-  first_name: 'Boo',
-  last_name: 'Boo',
+  first_name: 'Big',
+  last_name: 'Mac',
   address: '164 avenue de choisy 75013',
-  email: 'boo@boo.com',
+  email: 'big@mac.com',
   phone_number: '0246343409'
 )
 
 
 client_8 = Client.create!(
-  first_name: 'Mme',
-  last_name: 'Rosalina',
+  first_name: 'Speedy',
+  last_name: 'Gonzales',
   address: '10 avenue parmentier 75011 Paris',
-  email: 'princess@daisy.com',
+  email: 'speedy@gonzales.com',
   phone_number: '0246343409'
 )
 
 client_9 = Client.create!(
-  first_name: 'Sir',
-  last_name: 'Birdo',
+  first_name: 'Ross',
+  last_name: 'Geller',
   address: '286 Rue de Vaugirard, 75015 Paris',
-  email: 'birdo@mario.com',
+  email: 'ross@geller.com',
   phone_number: '0246343409'
 )
 
 client_7 = Client.create!(
-  first_name: 'Princess',
-  last_name: 'Daisy',
+  first_name: 'Meunier',
+  last_name: 'Tudor',
   address: '70 avenue trudaine 75009 Paris',
-  email: 'princess@daisy.com',
+  email: 'meunier@tudor.com',
   phone_number: '0246343409'
 )
 
