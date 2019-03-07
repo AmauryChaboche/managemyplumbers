@@ -169,16 +169,18 @@ if (calendar) {
         title: "Booking Information?",
         text: message,
         buttons: {
-          cancel: "OK",
+          cancel:"OK",
           catch: {
             text: "Update",
             value: "catch",
+            // ButtonColor: #1B998B,
           },
           delete: {
             text: "Delete",
             value: "delete",
             dangerMode: true,
             buttons: true,
+            // ButtonColor: #1B998B,
           },
         },
       })
@@ -219,7 +221,9 @@ if (calendar) {
           default:
             // swal("Got away safely!");
         }
+
       });
+
     }
   })
 
