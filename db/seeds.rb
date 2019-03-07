@@ -88,7 +88,7 @@ user_3 = User.create!(
 )
 
 user_4 = User.create!(
-  first_name: 'Warluigi',
+  first_name: 'Waluigi',
   last_name: 'Bros',
   email: 'warluigi@myplumbers.com',
   password: '123456',

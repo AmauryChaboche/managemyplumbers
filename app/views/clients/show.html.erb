@@ -41,6 +41,7 @@
               </div>
               <div class="travel-time">
                 <p>Travel time: <strong><%= booking.travel_time / 60 %> minutes</strong></p>
+                <p id="emergency"><strong>Emergency</strong></p>
               </div>
               <div class="matchbutton">
                 <%= link_to "Book this slot", booking_path(booking.id) , method: :patch , class:'call-to-action' %>

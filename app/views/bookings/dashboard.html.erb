@@ -30,19 +30,34 @@
             </div>
             <div class="message-body">
               <p>Client satisfaction</p>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
+              <% x = rand(1..3) %>
+              <% if x == 1  %>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              <% elsif x == 2 %>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              <% else  %>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              <% end  %>
             </div>
             <div class="message-body">
               <p>Interventions</p>
-              <p><strong><%= employee.bookings.size %> done last week</strong></p>
+              <p><strong><%= employee.bookings.size %> done</strong></p>
             </div>
             <div class="message-status">
               <p class="status accepted">Turnover</p>
-              <p class="price"><strong><%= employee.turnover %> €</strong></p>
+              <p class="price"><strong><%= employee.turnover%> €</strong></p>
             </div>
           </div>
         <% end %>
