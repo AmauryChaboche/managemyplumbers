@@ -30,15 +30,11 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-    # start_date = params[:start_date]
-    # user_id = params[:user_id]
-    # booking_params[:start_date]
     if @booking.planified
       @booking.update(booking_params)
     else
-      @booking.planified = true
-      @booking.save!
-      current_user.bookings.where(planified: false).destroy_all
+      @booking.update(planified: true)
+      current_user.bookings.where(planified: false).each(&:destroy)
     end
     redirect_to bookings_path
   end

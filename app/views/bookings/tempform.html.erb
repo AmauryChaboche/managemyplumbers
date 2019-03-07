@@ -1,0 +1,17 @@
+<%#= f.association :user, as: :check_boxes %>
+
+
+<!--
+        <div class="form-group">
+          <label class="check_boxes control-label optional">Choose your plumber</label>
+          <input type="hidden" name="booking[user_ids][]" value="">
+          <div class="plumber-choices">
+            <#% User.all.each do |user| %>
+              <input class="" type="checkbox" value="<%= user.id %>" name="booking[user_ids][]" id="booking_user_ids_<%= user.id %>">
+              <label class="plumber-choice" for="booking_user_ids_<%= user.id %>">
+                <%= user.first_name %>
+                <#%= image_tag user.avatar, class: "avatar-large" %>
+              </label>
+            <#% end %>
+          </div>
+        </div> -->
