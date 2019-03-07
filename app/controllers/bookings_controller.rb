@@ -72,7 +72,6 @@ class BookingsController < ApplicationController
       format.html { redirect_to bookings_path }
       format.json { head 204 }
     end
-
   end
 
   private

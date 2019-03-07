@@ -30,14 +30,14 @@
             </div>
             <div class="message-body">
               <p>Client satisfaction</p>
-              <% x = rand(1..3) %>
-              <% if x == 1  %>
+
+              <% if employee.turnover <= 200  %>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
-              <% elsif x == 2 %>
+              <% elsif employee.turnover <= 280 %>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
