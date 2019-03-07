@@ -14,7 +14,8 @@ class ClientsController < ApplicationController
         @booking3 = Booking.create(booking_params.merge(client_id: client.id))
         if @booking3.save
           BookingSchedulerService.new(@booking3).call3
-          @booking3.save
+          @booking3.price = @booking3.intervention.price + 50
+          @booking3.save!
           redirect_to client_path(@booking3.client_id)
         else
           render :new
@@ -25,6 +26,8 @@ class ClientsController < ApplicationController
         if @booking.save
           BookingSchedulerService.new(@booking).call
           BookingSchedulerService.new(@booking2).call2
+          @booking.price = @booking.intervention.price
+          @booking2.price = @booking2.intervention.price
           @booking.save!
           @booking2.save!
           redirect_to client_path(@booking.client_id)
@@ -34,6 +37,7 @@ class ClientsController < ApplicationController
       end
     else
       @booking = Booking.create(booking_params.merge(client_id: client.id))
+      @booking.price = @booking.intervention.price
       if @booking.save
         redirect_to edit_booking_path(@booking)
       else

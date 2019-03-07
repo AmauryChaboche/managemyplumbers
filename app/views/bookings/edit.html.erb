@@ -2,7 +2,7 @@
   <div class="container">
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
       <%= simple_form_for(@booking) do |f| %>
-        <%= f.association :user, collection: User.all, label: "Plumbers", prompt: "Select a Plumber", label_method: :first_name%>
+        <%= f.association :user, collection: User.employees, label: "Plumbers", prompt: "Select a Plumber", label_method: :first_name%>
         <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <% if @booking.start_date != nil %>

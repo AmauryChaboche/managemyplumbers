@@ -154,7 +154,7 @@ if (calendar) {
     eventClick: function(calEvent, jsEvent, view) {
     const number = calEvent.travel_time / 60
     const trav = Math.round( number * 10 ) / 10;
-      const book_id = calEvent.id
+      const book_id = calEvent.id;
       // console.log(calEvent)
       const message = ' Client: ' + calEvent.client.first_name + ' ' + calEvent.client.last_name  +
         '\n Category: ' + calEvent.intervention.category +
