@@ -1,12 +1,26 @@
 <%= render layout: "layouts/main_layout", locals: {main_title: "Create your booking", main_date: ""} do %>
   <div class="container">
+
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
       <%= simple_form_for(@booking) do |f| %>
-        <%= f.association :user, collection: User.all, label: "Plumbers", prompt: "Select a Plumber", label_method: :first_name%>
+        <div class="form-group">
+          <label class="check_boxes control-label optional">Choose your plumber</label>
+          <div class="plumber-choices">
+            <% User.all.each do |user| %>
+              <% identifier = "booking_user_ids_#{user.id}" %>
+              <input class="" type="checkbox" hidden value="<%= user.id %>" name="booking[user_id]" id="<%= identifier %>">
+              <label class="plumber-choice <%= 'active' if user == @booking.user %>" for="<%= identifier %>">
+                <%= user.first_name %>
+                <%= image_tag user.avatar, class: "avatar-large" %>
+              </label>
+            <% end %>
+          </div>
+        </div>
+
         <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <% if @booking.start_date != nil %>
-           <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' } %>
+          <%= f.input :intervention_id, collection: Intervention.all, label_method: :category, input_html: { name: 'booking[intervention_id]' } %>
         <% end  %>
         <%= f.button :submit, "Add", class: "btn btn-primary" %>
       <% end %>

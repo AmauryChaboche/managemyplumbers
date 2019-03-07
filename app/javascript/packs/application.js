@@ -15,6 +15,8 @@ import { chooseAddress } from "../plugins/init_mapbox";
 
 import { myChart } from '../plugins/init_chart';
 
+import { plumbersChoice } from '../plugins/plumber_choice';
+
 initMapbox();
 initSelect2();
 initAutocomplete();
@@ -47,6 +49,9 @@ import { findAMatch } from '../plugins/find_a_match';
 if (document.getElementById("new_client_email")) {
   findAMatch();
 }
+
+
+plumbersChoice();
 
 
 

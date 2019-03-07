@@ -1,7 +1,16 @@
 .avatar-large {
   width: 56px;
   border-radius: 50%;
+&:hover {
+  width: 70px;
 }
+&.active {
+ background: $brand-primary;
+  color: white;
+  opacity: 1;
+}
+}
+
 .avatar-very-large {
   width: 66px;
   border-radius: 50%;
