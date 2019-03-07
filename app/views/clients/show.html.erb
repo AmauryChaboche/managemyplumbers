@@ -10,7 +10,7 @@
         <p><i class="fas fa-wrench"></i> <%= @bookings[0].intervention.category%></p>
         <p><i class="fas fa-hourglass-start"></i>  <%= @bookings[0].intervention.duration%> minutes</p>
         <% if @bookings[0].urgency %>
-          <p><i class="fas fa-money-bill-alt"></i></i> <%=" #{@bookings[0].price}€ ( #{@bookings[0].intervention.price}€" %> <span style="color:red"> + 50€ </span> )
+          <p><i class="fas fa-money-bill-alt"></i></i> <%=" #{@bookings[0].price}€ ( #{@bookings[0].intervention.price}€" %> <span style="color:#D63230"> + 50€ </span> )
 
         <% else %>
           <p><i class="fas fa-money-bill-alt"></i></i>  <%= @bookings[0].intervention.price%> €
