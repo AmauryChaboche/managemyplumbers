@@ -285,14 +285,3 @@ booking_4 = Booking.create!(
 )
 
 
-booking_13 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day - 1,10,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,45),
-  intervention: intervention_1,
-  client: client_3,
-  user: user_3,
-  planified: true,
-  travel_time: 600,
-  price: intervention_1.price.to_i
-)
-
