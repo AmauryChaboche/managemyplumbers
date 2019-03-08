@@ -13,7 +13,7 @@
               <div class="plumber-choices">
                 <% User.employees.each do |user| %>
                   <% identifier = "booking_user_ids_#{user.id}" %>
-                  <input class="" type="checkbox" hidden value="<%= user.id %>" name="booking[user_id]" id="<%= identifier %>">
+                  <input class="" type="radio" hidden value="<%= user.id %>" name="booking[user_id]" id="<%= identifier %>">
                   <label class="plumber-choice <%= 'active' if user == @booking.user %>" for="<%= identifier %>">
                     <%= user.first_name %>
                     <%= image_tag user.avatar, class: "avatar-large" %>
