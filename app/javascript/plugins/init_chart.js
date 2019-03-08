@@ -126,7 +126,7 @@ if (dashboard) {
           },
           title: {
             display: true,
-            text: 'Week turnover',
+            text: 'Today turnover',
             fontSize: 24
           }
       },

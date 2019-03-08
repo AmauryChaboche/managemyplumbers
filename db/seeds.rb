@@ -159,7 +159,7 @@ client_6 = Client.create!(
   phone_number: '0246343409'
 )
 
-client_8 = Client.create!(
+client_10 = Client.create!(
   first_name: 'Speedy',
   last_name: 'Gonzales',
   address: '10 avenue parmentier 75011 Paris',
@@ -167,7 +167,7 @@ client_8 = Client.create!(
   phone_number: '0246343409'
 )
 
-client_9 = Client.create!(
+client_11 = Client.create!(
   first_name: 'Ross',
   last_name: 'Geller',
   address: '286 Rue de Vaugirard, 75015 Paris',
@@ -208,7 +208,7 @@ booking_10 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
   intervention: intervention_3,
-  client: client_6,
+  client: client_9,
   user: user_1,
   planified: true,
   travel_time: 780,
@@ -231,7 +231,7 @@ booking_9 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,10),
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,20),
   intervention: intervention_5,
-  client: client_7,
+  client: client_11,
   user: user_2,
   planified: true,
   travel_time: 900,
@@ -268,34 +268,24 @@ booking_1 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,12,00),
   intervention: intervention_1,
-  client: client_1,
+  client: client_10,
   user: user_3,
   planified: true,
   travel_time: 660,
   price: intervention_1.price.to_i
 )
-# Minion Minion bookings
+# Toad bookings
 
 booking_5 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,10),
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,45),
   intervention: intervention_1,
-  client: client_6,
+  client: client_7,
   planified: true,
   user: user_5,
   travel_time: 1500,
   price: intervention_1.price.to_i
 )
 
-booking_4 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
-  intervention: intervention_4,
-  client: client_5,
-  user: user_5,
-  planified: true,
-  travel_time: 1200,
-  price: intervention_4.price.to_i
-)
 
 
