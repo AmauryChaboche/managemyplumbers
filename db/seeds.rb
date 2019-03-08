@@ -152,11 +152,11 @@ client_5 = Client.create!(
 )
 
 client_6 = Client.create!(
-  first_name: 'Steve',
-  last_name: 'Urkel',
-  address: '164 avenue de choisy 75013',
-  email: 'steve@urkel.com',
-  phone_number: '0246343409'
+  first_name: 'Cyril',
+  last_name: 'Hanouna',
+  address: '2 rue des Boulets 75011 Paris',
+  email: 'cyril.hanouna@tpmp.fr',
+  phone_number: '0634340909'
 )
 
 client_10 = Client.create!(
