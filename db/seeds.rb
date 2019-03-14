@@ -99,89 +99,103 @@ user_4 = User.create!(
 )
 
 user_5 = User.create!(
-  first_name: 'Minion',
-  last_name: 'Minion',
-  email: 'minion@myplumbers.com',
+  first_name: 'Toad',
+  last_name: 'Bros',
+  email: 'toad@myplumbers.com',
   password: '123456',
   manager: manager,
   starting_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9),
   ending_hour: DateTime.new(2019, DateTime.now.month, DateTime.now.day,14),
-  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551863517/samples/people/Minion_avatar_sin_border.svg'
+  avatar: 'https://res.cloudinary.com/dvsxgvwog/image/upload/v1551977061/samples/people/Toad_avatar.svg'
 )
 
 puts "create clients ..."
 
 client_1 = Client.create!(
-  first_name: 'Princess',
-  last_name: 'Peach',
+  first_name: 'Teddy',
+  last_name: 'Riner',
   address: '15 Rue De Rivoli, 75004 Paris, France',
-  email: 'princess@peach.com',
+  email: 'teddy@riner.com',
   phone_number: '0175404142'
 )
 
 client_2 = Client.create!(
-  first_name: 'Toad',
-  last_name: 'Deluxe',
+  first_name: 'Passe',
+  last_name: 'Partout',
   address: '25 boulevard de magenta, Paris',
-  email: 'toad.d@mail.com',
+  email: 'passe.p@mail.com',
   phone_number: '0675404142'
 )
 
 client_3 = Client.create!(
-  first_name: 'Donkey',
-  last_name: 'Kong',
+  first_name: 'Pamela',
+  last_name: 'Anderson',
   address: '52 Rue des Vignes, 75016 Paris',
-  email: 'donkey.kong@mail.com',
+  email: 'pamela.anderson@mail.com',
   phone_number: '0345534509'
 )
 
-
 client_4 = Client.create!(
-  first_name: 'Didi',
-  last_name: 'Kong',
-  address: '14 rue de passy 75016 paris',
-  email: 'didi.kong@mail.com',
+  first_name: 'Adil',
+  last_name: 'Rami',
+  address: '10 rue de rome 75008 Paris',
+  email: 'adil.rami@mail.com',
   phone_number: '0345534509'
 )
 
 client_5 = Client.create!(
-  first_name: 'Yoshi',
-  last_name: 'Yoshi',
+  first_name: 'Marty',
+  last_name: 'McFly',
   address: '10 boulevard voltaire 75011 Paris',
-  email: 'yoshi@mail.com',
+  email: 'marty@mcfly.com',
   phone_number: '0345534509'
 )
 
 client_6 = Client.create!(
-  first_name: 'Boo',
-  last_name: 'Boo',
-  address: '164 avenue de choisy 75013',
-  email: 'boo@boo.com',
-  phone_number: '0246343409'
+  first_name: 'Cyril',
+  last_name: 'Hanouna',
+  address: '2 rue des Boulets 75011 Paris',
+  email: 'cyril.hanouna@tpmp.fr',
+  phone_number: '0634340909'
 )
 
-
-client_8 = Client.create!(
-  first_name: 'Mme',
-  last_name: 'Rosalina',
+client_10 = Client.create!(
+  first_name: 'Speedy',
+  last_name: 'Gonzales',
   address: '10 avenue parmentier 75011 Paris',
-  email: 'princess@daisy.com',
+  email: 'speedy@gonzales.com',
   phone_number: '0246343409'
 )
 
-client_9 = Client.create!(
-  first_name: 'Sir',
-  last_name: 'Birdo',
+client_11 = Client.create!(
+  first_name: 'Ross',
+  last_name: 'Geller',
   address: '286 Rue de Vaugirard, 75015 Paris',
-  email: 'birdo@mario.com',
+  email: 'ross@geller.com',
   phone_number: '0246343409'
 )
 
 client_7 = Client.create!(
-  first_name: 'Princess',
-  last_name: 'Daisy',
+  first_name: 'Meunier',
+  last_name: 'Tudor',
   address: '70 avenue trudaine 75009 Paris',
-  email: 'princess@daisy.com',
+  email: 'meunier@tudor.com',
+  phone_number: '0246343409'
+)
+
+client_8 = Client.create!(
+  first_name: 'Mickael',
+  last_name: 'Jordan',
+  address: '70 avenue trudaine 75009 Paris',
+  email: 'mickael@jordan.com',
+  phone_number: '0246343409'
+)
+
+client_9 = Client.create!(
+  first_name: 'Bruce',
+  last_name: 'Lee',
+  address: '70 avenue trudaine 75009 Paris',
+  email: 'bruce@lee.com',
   phone_number: '0246343409'
 )
 
@@ -194,7 +208,7 @@ booking_10 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,30),
   intervention: intervention_3,
-  client: client_6,
+  client: client_9,
   user: user_1,
   planified: true,
   travel_time: 780,
@@ -217,7 +231,7 @@ booking_9 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,10),
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,20),
   intervention: intervention_5,
-  client: client_7,
+  client: client_11,
   user: user_2,
   planified: true,
   travel_time: 900,
@@ -254,34 +268,24 @@ booking_1 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,12,00),
   intervention: intervention_1,
-  client: client_1,
+  client: client_10,
   user: user_3,
   planified: true,
   travel_time: 660,
   price: intervention_1.price.to_i
 )
-# Minion Minion bookings
+# Toad bookings
 
 booking_5 = Booking.create!(
   start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,10),
   end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,9,45),
   intervention: intervention_1,
-  client: client_6,
+  client: client_7,
   planified: true,
   user: user_5,
   travel_time: 1500,
   price: intervention_1.price.to_i
 )
 
-booking_4 = Booking.create!(
-  start_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,10,00),
-  end_date: DateTime.new(2019, DateTime.now.month, DateTime.now.day,11,00),
-  intervention: intervention_4,
-  client: client_5,
-  user: user_5,
-  planified: true,
-  travel_time: 1200,
-  price: intervention_4.price.to_i
-)
 
 

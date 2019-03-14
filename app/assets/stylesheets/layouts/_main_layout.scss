@@ -6,7 +6,7 @@
   flex-grow: 1;
   align-content: center;
   font-family: nunito;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .main-page-title {
@@ -45,4 +45,7 @@
   decoration: none !important;
   cursor: pointer;
   padding-left: 10px;
+}
+#index-container {
+  padding-top: 0px !important;
 }
